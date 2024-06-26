@@ -1537,3 +1537,50 @@ import java.util.*;
 //     }
 // }
 
+// class practice1{
+//     public static void main(String[] args) {
+//         String a="hello world";
+//         String b="ll";
+//         int c=a.length();
+//         int d=b.length();
+//         int e=c+1;
+//         int f=e-d;
+//         System.out.println(c+" "+d+" "+f);
+//         for(int j=0;j<f;j++){
+//             String g="";
+//             g=a.substring(j, j+d);
+//             if(g.equals(b)){
+//                 System.out.println("match found in word : "+a);
+//             }
+//         }
+//     }
+// }
+
+
+// class practice1{
+//     public static void main(String[] args) {
+//         String a[]={"helloworld","hello","world"};
+//         String b="ll";
+//         int d=b.length();
+//         for(int i=0;i<a.length;i++){
+//         int c=a[i].length();
+//         int e=c+1;
+//         int f=e-d;
+//         boolean ar;
+//         System.out.println(c+" "+d+" "+f);
+//             for(int j=0;j<f;j++){
+//                 String g="";
+//                 g=a[i].substring(j, j+d);
+//                 System.out.println(g);
+//                 if(b.equals(g)){
+//                     System.out.println("match found");
+//                 }
+//                 else{
+//                     System.out.println("not found : ");
+//                 }
+//             }
+
+//         }
+        
+//     }
+// }
