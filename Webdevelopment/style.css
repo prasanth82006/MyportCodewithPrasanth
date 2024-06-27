@@ -50,6 +50,10 @@ button{
     color: blue;
     background-color:rgb(211, 187, 187);
 }
+.photo{
+    width: 350px;
+    height: 220px;
+}
 img{
     width: 200px;
     height: 200px;
@@ -61,6 +65,7 @@ section{
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
