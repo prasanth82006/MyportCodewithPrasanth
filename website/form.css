@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c8ebf9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box1,.box2,.box3,.box4,.box5{
+    background-color: white;
+    border-color: white;
+    border-radius:8px;
+    border-style: solid;
+    padding:5px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+.mail-logo-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: row;
+    align-items: center;
+}
+.boxA{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: row;
+    align-items: center;
+}
+.mail {
+    font-size: 14px;
+    color: #333;
+}
+.logo img{
+    height: 50px;
+    width: 50px;
+}
+input[type="text"], input[type="email"], input[type="file"] {
+    width: 40%;
+    padding: 8px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border:transparent;
+}
+button {
+    display: inline-block;
+    border-radius: 10px;
+    padding:5px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    height: 40px;
+    width: 75px;
+}
+
+button[type="submit"] {
+    background-color: #1a73e8;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #1558b0;
+}
+label[for="file-upload"] {
+    display: inline-block;
+    cursor: pointer;
+    color: rgb(34, 184, 244);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width:10%;
+}
+
+label[for="file-upload"] img {
+    margin-right: 5px;
+}
+.box6{
+    margin-right: 100px;
+}
+.box7{
+    font-size: 20px;
+    padding-right:20px;
+    margin-left:500px;
+}
+.boxB{
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    align-self: row;
+    align-items: center;
+}
+.box8{
+    font-size:15px;
+    padding-left:10px;
+    margin-right: 25px;
+}
+.box9{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.box10{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    align-self: row;
+    align-items: center;
+}
+.boxD{
+    padding-bottom: 10px;
+}
+

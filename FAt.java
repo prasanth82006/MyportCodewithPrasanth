@@ -1556,7 +1556,6 @@ import java.util.*;
 //     }
 // }
 
-
 // class practice1{
 //     public static void main(String[] args) {
 //         String a[]={"helloworld","hello","world"};
@@ -1579,8 +1578,6 @@ import java.util.*;
 //                     System.out.println("not found : ");
 //                 }
 //             }
-
 //         }
-        
 //     }
 // }
