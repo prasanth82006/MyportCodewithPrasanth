@@ -255,3 +255,38 @@ import java.util.*;
 //     }
 // }
 
+import java.util.*;
+// public class list {
+//     public static void main(String[] args) {
+//         int a=10;
+//         int b=20;
+//         Scanner sc=new Scanner(System.in);
+//         String c=sc.next();
+//         System.out.println((c.equals("+")) ? a+b:(c.equals("-")) ? a-b: a+" "+b);
+//     }
+// }
+
+
+// public class list {
+//     public static void main(String[] args) {
+//         Scanner sc=new Scanner(System.in);
+//         int a= sc.nextInt();
+//         System.out.println((a%2==0) ? "the number is even:"+a: "the number is odd:"+a);
+
+//     }
+// }
+
+// public class list {
+//     public static void main(String[] args) {
+//         prin(1);
+//     }
+//     public static void prin(int num){
+//         if(num<=100){
+//             System.out.println(num);
+//             prin(num+1);
+//         }
+//     }
+// }
+
+
+
