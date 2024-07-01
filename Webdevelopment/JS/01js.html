@@ -35,14 +35,17 @@
         para.id="new"
         para.innerHTML="the new line is gerenated";
         para.style.color="red";
-        let paraToRemove = document.getElementById("new");
-            paraToRemove.parentNode.removeChild(paraToRemove);
+        para.addEventListener("mouseover",function(){
+            para.style.color="blue";
+        });
+        // let paraToRemove = document.getElementById("new"); h
+        //     paraToRemove.parentNode.removeChild(paraToRemove);
                     // var el=document.getElementById("heading");
         // var ele=document.getElementById("image");
         // ele.setAttribute("alt","this my image");
         // el.innerHTML="Prasanth";
         // document.write("Python");
-        alert('Hello, world!');
+        // alert('Hello, world!');
     </script>
 </body>
 </html>
