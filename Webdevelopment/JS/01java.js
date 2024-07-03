@@ -66,5 +66,112 @@
 //     cl.textContent=count;
 // }
 
-let randomnum=Math.floor(Math.random() * 10);
-console.log(randomnum);
+// let randomnum=Math.floor(Math.random() * 10);
+// console.log(randomnum);
+
+// let Name="Prasanth  Kumar";
+// let indexname=Name.slice(0,8);
+// console.log(indexname);
+
+// let username=window.prompt("Enter your username");
+// username=username.trim();
+// let Letter=username.charAt(0);
+// Letter=Letter.toUpperCasep();
+// let extra=username.slice(1,username.length);
+// extra=extra.toLowerCase();
+// username=Letter+extra;
+// console.log(username);
+
+// let min=0;
+// let max=100;
+// const answer=Math.floor(Math.random() *(max-min+1)) + min;
+
+// let attempts=0;
+// let guess;
+// let running=true;
+
+// while(running){
+//     guess=window.prompt(`enter your number b/w ${min} to ${max}`);
+//     guess=Number(guess);
+//     if(isNaN(guess)||guess< min|| guess>max){
+//         window.alert("Please enter vaild number");
+//     }
+//     else{
+//         attempts++;
+//         if(guess > answer){
+//             window.alert("Too High! Try again");
+//         }
+//         else if(guess<answer){
+//             window.alert("Too Low! Try again");
+//         }
+//         else{
+//             window.alert(`Correct! the answer was ${answer} and the ${attempts} attempts`);
+//             running=false;
+//         }
+//     }
+// }
+
+// let email="Prasanth@gmail.com"
+// if(email.includes("@")){
+//     console.log("Yes");
+// }
+// else{
+//     console.log("NO");
+// }
+
+// const t=document.getElementById("textbox");
+// const F=document.getElementById("toF");
+// const C=document.getElementById("toC");
+// const P=document.getElementById("p");
+// let temp;
+
+// function convert(){
+//     if(F.checked){
+//         temp=Number(textbox.value);
+//         temp=temp*9/5+32;
+//         P.textContent=temp.toFixed(2)+"*F";
+//     } 
+//     else if(C.checked){
+//         temp=Number(textbox.value);
+//         temp=(temp-32)*(5/9);
+//         P.textContent=temp.toFixed(2)+"*F";
+//     }
+//     else{
+//         P.textContent="Select a unit";
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
