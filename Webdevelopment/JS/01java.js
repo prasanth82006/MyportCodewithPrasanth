@@ -141,12 +141,24 @@
 //     }
 // }
 
+// spread operators
+// let name=["Prasanth","Kumar","manaswi"];
+// let fruit=["mango","apples"];
+// let names=[...name,...fruit,"Tulasi"];
+// console.log(names);
 
+// call Back function
 
+Hello(Bye);
+function Hello(callback){
+    console.log("Hello!");
+    callback();
+}
 
-
-
-
+function Bye(){
+    console.log("Byeee");
+}
+ 
 
 
 

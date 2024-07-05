@@ -290,3 +290,39 @@ import java.util.*;
 
 
 
+// binary search
+// public class list {
+//     public static void main(String[] args) {
+//         int num[]={1,2,3,4,5};
+//         int result=binarysearch(num, 10);
+//         if(result!=-1){
+//             System.out.println("The element index is:"+result);
+//         }
+//         else{
+//             System.out.println("The element not found");
+//         }
+//     }
+//     public static int binarysearch(int number[],int a){
+//         int low=0;
+//         int high=4;
+//         while(low<=high){
+//             int m=(high+low)/2;
+//             int p=number[m];
+//             if(a==p){
+//                 return m;
+//             }
+//             if(a<p){
+//                 high=m-1;
+//             }
+//             else{
+//                 low=m+1;
+//                 // System.out.println(low);
+//                 // System.out.println(high);
+//             }
+//         }
+//         return -1;
+        
+//     }
+// }
+
+
