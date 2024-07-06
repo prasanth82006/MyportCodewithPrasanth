@@ -321,8 +321,81 @@ import java.util.*;
 //             }
 //         }
 //         return -1;
-        
+//     }
+// }
+
+// Sorting techinque
+
+// Bubble sort
+
+// public class list {
+//     public static void main(String[] args) {
+        // int a[]={2,3,1,0,9,34,7};
+        // System.out.println("The original array"+Arrays.toString(a));
+//         for(int i=0;i<a.length;i++){
+//             for(int j=i+1;j<a.length;j++){
+//                 if(a[i]>a[j]){
+//                     int temp=a[i];
+//                     a[i]=a[j];
+//                     a[j]=temp;
+//                 }
+//             }
+//             System.out.println(Arrays.toString(a));
+//         }
+        // System.out.println("The sorted arrays"+Arrays.toString(a));
 //     }
 // }
 
 
+// Selection sort
+
+// public class list {
+    // public static void main(String[] args) {
+    //     int a[]={2,3,1,0,9,34,7};
+    //     System.out.println("The original array"+Arrays.toString(a));
+//         int temp=0;
+//         int minindex=0;
+//         for(int i=0;i<a.length-1;i++){
+//             minindex=i;
+//             for(int j=i+1;j<a.length;j++){
+//                 if(a[minindex]<a[j]){
+//                     minindex=j;
+//                 }
+//             }
+//             temp=a[minindex];
+//             a[minindex]=a[i];
+//             a[i]=temp;
+//         }
+//         // for(int i=0;i<a.length-1;i++){
+//         //     minindex=i;
+//         //     for(int j=i+1;j<a.length;j++){
+//         //         if(a[minindex]>a[j]){
+//         //             minindex=j;
+//         //         }
+//         //     }
+//         //     temp=a[minindex];
+//         //     a[minindex]=a[i];
+//         //     a[i]=temp;
+//         // }
+//             System.out.println("The sorted arrays"+Arrays.toString(a));
+//     }
+// }
+
+//Insertion sort
+// Shifting is done
+// public class list {
+//     public static void main(String[] args) {
+//         int a[]={2,3,1,0,9,34,7};
+//         System.out.println("The original array"+Arrays.toString(a));
+//         for(int i=0;i<a.length;i++){
+//             int key=a[i];
+//             int temp=i-1;
+//             while(temp>=0 && a[temp] >key){
+//                 a[temp+1]=a[temp];
+//                 temp--;
+//             }
+//             a[temp+1]=key;
+//         }
+//         System.out.println("The sorted arrays"+Arrays.toString(a));
+//     }
+// }

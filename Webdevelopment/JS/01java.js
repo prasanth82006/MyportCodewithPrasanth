@@ -148,26 +148,43 @@
 // console.log(names);
 
 // call Back function
+// Hello(Bye);
+// function Hello(callback){
+//     console.log("Hello!");
+//     callback(ok);
+// }
+// function Bye(callback1){
+//     console.log("Byeee");
+//     callback1();
+// }
+// function ok(){
+//     console.log("Okk");
+// }
 
-Hello(Bye);
-function Hello(callback){
-    console.log("Hello!");
-    callback();
-}
+// foreach method
 
-function Bye(){
-    console.log("Byeee");
-}
- 
+// let num=[1,2,3,4,5];
+// num.forEach(display)
+// function display(num){
+//     console.log(num);
+// }
 
+// let fruits=["apple","banana","orange","coconut"];
+// // fruits.forEach(Upper);
+// fruits.forEach(Capatilze);
+// fruits.forEach(display);
 
+// // function Upper(element,index,array){
+// //     array[index]=element.toUpperCase();
+// // }
 
+// function Capatilze(element,index,array){
+//     array[index]=element.charAt(0).toUpperCase() + element.slice(1);
+// }
 
-
-
-
-
-
+// function display(element){
+//     console.log(element);
+// }
 
 
 
