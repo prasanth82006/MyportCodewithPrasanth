@@ -186,21 +186,72 @@
 //     console.log(element);
 // }
 
+// const a=[1,2,3,4,5,6,7,8,9,10];
+// const sum=a.reduce(su);
+// const max1=a.reduce(max);
+// const mini=a.reduce(min);
+// console.log(sum);
+// console.log(max1);
+// console.log(mini);
+// function su(p,n){
+//     return p+n;
+// }
+// function max(p,n){
+//     return Math.max(p,n);
+// }
+// function min(p,n){
+//     return Math.min(p,n);
+// }
 
+// function expression
+// const Hello= function() {
+//     console.log("Hello! guys");
+// }
+// Hello();
 
+// arrow Expression
 
+// const st=(name,age) => {console.log(`Hello my name is ${name}`);
+//                         console.log(`your age is ${age}`)};
+// st("Prasanth Kumar",12);
 
+// Objects
+// const Person={
+//     firstname:"Palla",
+//     lastname:"Prasanth",
+//     age:18,
+//     isEmployeed:"NO",
+//     sayHello:function(){console.log(`Hello my Name ${this.firstname} ${this.lastname}`);}
+// }
+// console.log(Person.firstname);
+// console.log(Person.lastname);
+// console.log(Person.age);
+// console.log(Person.isEmployeed);
+// Person.sayHello();
 
+// Constructor
+// function car(make,model,year,color){
+//     this.make=make;
+//     this.model=model;
+//     this.year=year;
+//     this.color=color;
+//     this.drive=function(){console.log(`Hello your allowed to drive ${this.model}`);}
+// }
+// const car1=new car("ford","h kcw",2024,"Red");
+// const car2=new car("BMW","kjvwjv",2013,"Black");
+// console.log(car1);
+// console.log(car2);
+// car1.drive();
+// car2.drive();
 
+// class User{
+//     static usercount=0;
+//     constructor(username){
+//         this.username=username;
+//         User.usercount++;
+//     }
 
-
-
-
-
-
-
-
-
-
-
-
+// }
+// const user1=new User("Prasanth");
+// const user2=new User("Kumar");
+// console.log(User.usercount);

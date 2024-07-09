@@ -15,6 +15,8 @@ import java.util.*;
 //         // l1.add(45);
 //         l2.add(45);
 
+import org.w3c.dom.Node;
+
 //         // System.out.println(l1.subList(1, 3));
 //         System.out.println(l1);
 //         System.out.println(l1.removeAll(l2));
@@ -350,7 +352,7 @@ import java.util.*;
 // Selection sort
 
 // public class list {
-    // public static void main(String[] args) {
+        //  public static void main(String[] args) {
     //     int a[]={2,3,1,0,9,34,7};
     //     System.out.println("The original array"+Arrays.toString(a));
 //         int temp=0;
@@ -398,4 +400,317 @@ import java.util.*;
 //         }
 //         System.out.println("The sorted arrays"+Arrays.toString(a));
 //     }
+// }
+
+// Qucik sort
+
+// public class list {
+//      public static void main(String[] args) {
+     //     int a[] = {5, 6, 1, 3, 4, 2};
+     //     System.out.println("The original array:");
+//          for (int num : a) {
+//              System.out.print(num + " ");
+//          }
+//          System.out.println();
+//          QuickSort(a, 0, a.length - 1);
+//          System.out.println("The sorted array:");
+//          for (int num : a) {
+//              System.out.print(num + " ");
+//          }
+//      }
+ 
+//      public static void QuickSort(int[] a, int low, int high) {
+//          if (low < high) {
+//              int pi = partition(a, low, high);
+//              QuickSort(a, low, pi - 1);
+//              QuickSort(a, pi + 1, high);
+//          }
+//      }
+ 
+//      public static int partition(int[] a, int low, int high) {
+//          int pivot = a[high];
+//          int i = low - 1;
+//          for (int j = low; j < high; j++) {
+//              if (a[j] < pivot) {
+//                  i++;
+//                  int temp = a[i];
+//                  a[i] = a[j];
+//                  a[j] = temp;
+//              }
+//          }
+//          int temp = a[i + 1];
+//          a[i + 1] = a[high];
+//          a[high] = temp;
+//          return i + 1;
+//      }
+//  }
+
+// import java.util.*;
+// public class list {
+//      public static void main(String[] args) {
+//           // ArrayList<Integer> a=new ArrayList<>();
+//           // LinkedList<Integer> a=new LinkedList<>();
+//           // Scanner sc=new Scanner(System.in);
+//           // for(int i=0;i<5;i++){
+//           //      int b=sc.nextInt();
+//           //      a.add(b);
+//           // }
+//           // System.out.println(a);  
+//           // a.set(0,2);
+//           // System.out.println(a);
+//           Stack<Integer> a=new Stack<>();
+//           a.push(2);
+//           a.push(5);
+//           a.push(4);
+//           a.push(3);
+//           System.out.println(a);
+//           System.out.println(a);
+//      }
+// }
+
+import java.util.*;
+// public class list{
+//      // LinkedList
+//      // static class Node{
+//      //      int data;
+//      //      Node next;
+//      //      public Node(int data){
+//      //           this.data=data;
+//      //           next=null;
+//      //      }
+//      // }
+//      // static class stack{
+//      //      public static Node head;
+//      //      public static boolean isEmpty(){
+//      //           return head==null;
+//      //      }
+//      //      public static void push(int data){
+//      //           Node newdata=new Node(data);
+//      //           newdata.next=head;
+//      //           head=newdata;
+//      //      }
+//      //      public static int pop(){
+//      //           if(isEmpty()){
+//      //                return -1;
+//      //           }
+//      //           int top=head.data;
+//      //           head=head.next;
+//      //           return top;
+//      //      }
+//      //      public static int  peek(){
+//      //           if(isEmpty()){
+//      //                return -1;
+//      //           }
+//      //           return head.data;
+//      //      }
+//      // }
+
+//      // arrayList
+//      static class stack{
+//           static ArrayList<Integer> b= new ArrayList<>();
+//           public static boolean isEmpty(){
+//                return b.size()==0;
+//           }
+
+//           public static void push(int data){
+//                b.add(data);
+//           }
+//           public static int pop(){
+//                int top=b.get(b.size()-1);
+//                b.remove(b.size()-1);
+//                return top;
+//           }
+//           public static int peek(){
+//                if(isEmpty()){
+//                     return -1;
+//                }
+//                return b.get(b.size()-1);
+//           }
+//      }
+//      public static void main(String[] args) {
+//           stack a=new stack();
+//           a.push(2);
+//           a.push(5);
+//           a.push(4);
+//           a.push(3);
+//           // a.printStack();
+//           while (!a.isEmpty()) {
+//                System.out.println(a.peek());
+//                a.pop();               
+//           }
+//      }
+// }
+
+// public class list{
+//      public static void pushAtbottom(int data, Stack<Integer> b){
+//           if(b.isEmpty()){
+//                b.push(data);
+//                return;
+//           }
+//           int top=b.pop();
+//           pushAtbottom(data,b);
+//           b.push(top);
+//      }
+//      public static void reverse(Stack<Integer> b){
+//           if(b.isEmpty()){
+//                return;
+//           }
+//           int top=b.pop();
+//           reverse(b);
+//           pushAtbottom(top, b);
+//      }
+//      public static void main(String[] args) {
+//           Stack<Integer> b=new Stack<>();
+//           b.push(2);
+//           b.push(5);
+//           b.push(3);
+//           reverse(b);
+//           while (!b.isEmpty()) {
+//                System.out.println(b.peek());
+//                b.pop();               
+//           }          
+//      }
+// }
+
+// public class list {
+//      public static int size;
+//      list(){
+//           this.size=0;
+//      }
+//      static  class Node{
+//           int data;
+//           Node next;
+//           public Node(int data){
+//                this.data=data;
+//                this.next=null;
+//                size++;
+//           }
+//      }
+//      static Node head;
+//      public static void addfirst(int data){
+//           Node newdata=new Node(data);
+//           if(head==null){
+//                head=newdata;
+//                return;
+//           }
+//           newdata.next=head;
+//           head=newdata;
+//      }
+//      public static void addlast(int data){
+//           Node newdata=new Node(data);
+//           if(head==null){
+//                head=newdata;
+//                return;
+//           }
+//           Node currNode=head;
+//           while(currNode.next!=null){
+//                currNode=currNode.next;
+//           }
+//           currNode.next=newdata;
+//      }
+//      public static void printlist(){
+//           if(head==null){
+//                System.out.println("List is empty");
+//                return;
+//           }
+//           Node currNode=head;
+//           while(currNode!=null){
+//                System.out.println(currNode.data+" -> ");
+//                currNode=currNode.next;
+//           }
+//           System.out.println("Null");
+//      }
+//      public static void delfirst(){
+//           if(head==null){
+//                System.out.println("The List is Empty");
+//                return;
+//           }
+//           size--;
+//           head=head.next;
+//      }
+//      public static void dellast(){
+//           if(head==null){
+//                System.out.println("The List is Empty");
+//                return;
+//           }
+//           size--;
+//           if(head.next==null){
+//                head=null;
+//                return;
+//           }
+//           Node secondlast=head;
+//           Node lastnode=head.next;
+//           while (lastnode.next!=null) {
+//                lastnode=lastnode.next;
+//                secondlast=secondlast.next;
+//           }
+//           secondlast.next=null;
+//      }
+//      public static int getsize(){
+//           return size;
+//      }
+//      public static void main(String[] args){
+//           list l=new list();
+//           l.addfirst(1);
+//           l.addlast(2);
+//           l.addlast(100);
+//           l.delfirst();
+//           l.dellast();
+//           // l.dellast();
+//           l.printlist();
+//           System.out.println(l.getsize());
+//      }
+// }
+
+// public class list {
+//      public static int size;
+//      public list(){
+//           this.size=0;
+//      }
+//      static class Node{
+//           int data;
+//           Node next;
+//           public Node(int data){
+//                this.data=data;
+//                this.next=null;
+//                size++;
+//           }
+//      }
+//      static Node head;
+//      public static void addFirst(int data){
+//           Node newdata=new Node(data);
+//           newdata.next=head;
+//           head=newdata;
+//      }
+     
+//      public static void addLast(int data){
+//           Node newdata=new Node(data);
+//           Node currNode=new Node(data);
+//           while(currNode.next!=null){
+//                currNode=currNode.next;
+//           }
+//           currNode.next=newdata;
+//      }
+//      public static void printlist(){
+//           if(head==null){
+//                System.out.println("List is empty");
+//                return;
+//           }
+//           Node currNode=head;
+//           while(currNode!=null){
+//                System.out.println(currNode.data);
+//                currNode=currNode.next;
+//           }
+//      }
+//      public static int getsize(){
+//           return size;
+//      }    
+
+//      public static void main(String[] args){
+//           list l=new list();
+//           l.addFirst(1);
+//           l.addFirst(2);
+//           l.printlist();
+//           System.out.println("The size of the list is:"+l.getsize());
+//      }
 // }
