@@ -714,3 +714,867 @@ import java.util.*;
 //           System.out.println("The size of the list is:"+l.getsize());
 //      }
 // }
+
+// reverse linkedlist
+// public class list {
+//      public static int size;
+//      public list(){
+//           this.size=0;
+//      }
+//      static class Node{
+//           int data;
+//           Node next;
+//           public Node(int data){
+//                this.data=data;
+//                this.next=null;
+//                size++;
+//           }
+//      }
+//      static Node head;
+//      public static void addFirst(int data){
+//           Node newdata=new Node(data);
+//           newdata.next=head;
+//           head=newdata;
+//      }
+     
+     // public static void addLast(int data){
+     //      Node newdata=new Node(data);
+     //      Node currNode=new Node(data);
+     //      while(currNode.next!=null){
+     //           currNode=currNode.next;
+     //      }
+     //      currNode.next=newdata;
+     // }
+     // public static void printlist(){
+     //      if(head==null){
+     //           System.out.println("List is empty");
+     //           return;
+     //      }
+     //      Node currNode=head;
+     //      while(currNode!=null){
+     //           System.out.println(currNode.data);
+     //           currNode=currNode.next;
+     //      }
+     // }
+     // public static int getsize(){
+     //      return size;
+     // }
+     // public static void reverselist(){
+     //      if(head==null|| head.next==null){
+     //           return;
+     //      }
+     //      Node prevNode=head;
+     //      Node curNode=head.next;
+     //      while (curNode!=null){
+     //           Node nextNode=curNode.next;
+     //           curNode.next=prevNode;
+     //           prevNode=curNode;
+     //           curNode=nextNode;
+     //      }
+     //      head.next=null;
+     //      head=prevNode;
+     // }
+     // public static Node reverseRecursion(Node head){
+     //      if(head==null|| head.next==null){
+     //           return head;
+     //      }
+     //      Node newhead=reverseRecursion(head.next);
+     //      head.next.next=head;
+     //      head.next=null;
+     //      return newhead;
+     // }
+//      public static void main(String[] args){
+//           list l=new list();
+//           l.addFirst(1);
+//           l.addFirst(2);
+//           // l.printlist();
+//           System.out.println("The size of the list is:"+l.getsize());
+//           // l.reverselist();
+//           // l.printlist();
+//           // l.head=l.reverseRecursion(l.head);
+//           l.printlist();
+//      }
+// }
+
+// Queue
+//operations are: Enque--> ADD|dequeue -->Remove|Front -->Peek 
+// using circular array
+// public class list {
+//      static class Queue{
+//           static int arr[];
+//           static int size;
+//           static int rear=-1;
+//           static int front=-1;
+//           Queue(int size){
+//                arr=new int[size];
+//                this.size=size;
+//           }
+//           public static boolean isEmpty(){
+//                return rear==-1 && front==-1;
+//           }
+//           public static boolean isFull(){
+//                return (rear+1)%size==front;
+//           }
+//           public static void add(int data){
+//                if(isFull()){
+//                     System.out.println("Full Queue");
+//                     return;
+//                }
+//                if(front==-1){
+//                     front=0;
+//                } 
+//                rear=(rear+1)%size;
+//                arr[rear]=data;
+//           }
+//           public static int remove(){
+//                if(isEmpty()){
+//                     System.out.println("Empty Queue");
+//                     return -1;
+//                }
+//                int result=arr[front];
+//                if(rear==front){
+//                     rear=front=-1;
+//                }
+//                else{
+//                     front=(front+1)%size;
+//                }
+//                return front;
+//           }
+//           public static int peek(){
+//                if(isEmpty()){
+//                     System.out.println("Empty Queue");
+//                     return -1;
+//                }
+//                return arr[front];
+//           }
+//      }
+//      public static void main(String[] args) { //Front-->start Rear-->last
+//           Queue q=new Queue(5);
+//           q.add(1);
+//           q.add(2);
+//           q.add(3);
+//           q.add(4);
+//           q.add(5);
+//           System.out.println(q.remove());
+//           q.add(6);
+//           System.out.println(q.remove());
+//           q.add(7);
+//           q.add(8);
+//           while (!q.isEmpty()){
+//                System.out.println(q.peek());
+//                q.remove();
+//           }
+//      }
+// }
+
+// linkedList
+// public class list {
+//      static class Node{
+//           int data;
+//           Node next;
+//           Node(int data){
+//                this.data=data;
+//                this.next=null;
+//           }
+//      }
+//      static class Queue{
+//           static Node head=null;
+//           static Node tail=null;
+//           public static boolean isEmpty(){
+//                return head ==null && tail==null;
+//           }
+          
+//           public static void add(int data){
+//                Node newdata=new Node(data);
+//                if(tail==null){
+//                     tail=head=newdata;
+//                     return;
+//                }
+//                tail.next=newdata;
+//                tail=newdata;
+//           }
+//           public static int remove(){
+//                if(isEmpty()){
+//                     System.out.println("Empty Queue");
+//                     return -1;
+//                }
+//                int front=head.data;
+//                if(head==tail){
+//                     tail=null;
+//                }
+//                head=head.next;
+//                return front;
+//           }
+//           public static int peek(){
+//                if(isEmpty()){
+//                     System.out.println("Empty Queue");
+//                     return -1;
+//                }
+//                return head.data;
+//           }
+//      }
+//      public static void main(String[] args) { //Front-->start Rear-->last
+//           Queue q=new Queue();
+          // q.add(1);
+          // q.add(2);
+          // q.add(3);
+          // q.add(4);
+          // q.add(5);
+          // System.out.println(q.remove());
+          // q.add(6);
+          // System.out.println(q.remove());
+          // q.add(7);
+          // q.add(8);
+          // while (!q.isEmpty()){
+          //      System.out.println(q.peek());
+          //      q.remove();
+          // }
+//      }
+// }
+
+//usingPackage
+// public class list {
+//      public static void main(String[] args) {
+//           // Queue<Integer> q=new LinkedList<>();
+//           Queue<Integer> q=new ArrayDeque<>();
+//           q.add(1);
+//           q.add(2);
+//           q.add(3);
+//           q.add(4);
+//           q.add(5);
+//           System.out.println(q.remove());
+//           q.add(6);
+//           System.out.println(q.remove());
+//           q.add(7);
+//           q.add(8);
+//           while (!q.isEmpty()){
+//                System.out.println(q.peek());
+//                q.remove();
+//           }
+//      }
+// } 
+
+// normal array
+// public class list {
+//      static class Queue{
+//           static int arr[];
+//           static int size;
+//           static int rear=-1;
+//           Queue(int size){
+//                arr=new int[size];
+//                this.size=size;
+//           }
+//           public static boolean isEmpty(){
+//                return rear==-1;
+//           }
+//           public static void add(int data){
+//                if(rear==size-1){
+//                     System.out.println("Full Queue");
+//                     return;
+//                }
+//                rear++;
+//                arr[rear]=data;
+//           }
+//           public static int remove(){
+//                if(isEmpty()){
+//                     System.out.println("Empty Queue");
+//                     return -1;
+//                }
+//                int front=arr[0];
+//                for(int i=0;i<rear;i++){
+//                     arr[i]=arr[i+1];
+//                }
+//                rear--;
+//                return front;
+//           }
+//           public static int peek(){
+//                if(isEmpty()){
+//                     System.out.println("Empty Queue");
+//                     return -1;
+//                }
+//                return arr[0];
+//           }
+//      }
+//      public static void main(String[] args) { //Front-->start Rear-->last
+//           Queue q=new Queue(5);
+//           q.add(1);
+//           q.add(2);
+//           q.add(3);
+//           q.add(4);
+//           q.add(5);
+          // while (!q.isEmpty()){
+          //      System.out.println(q.peek());
+          //      q.remove();
+          // }
+//      }
+// }
+
+// Problem
+// public class list{
+//      static class Queue{
+//           static Stack<Integer> s1=new Stack<>();
+//           static Stack<Integer> s2=new Stack<>();
+//           public static boolean isEmpty(){
+//                return s1.isEmpty();
+//           }
+//           public static void add(int data){
+//                while(!s1.isEmpty()){
+//                     s2.push(s1.pop());
+//                }
+//                s1.push(data);
+//                while(!s2.isEmpty()){
+//                     s1.push(s2.pop());
+//                }
+//           }
+//           public static int remove(){
+//                if(isEmpty()){
+//                     System.out.println("Empty Queue");
+//                     return -1;
+//                }
+//                return s1.pop();
+//           }
+//           public static int peek(){
+//                if(isEmpty()){
+//                     System.out.println("Empty Queue");
+//                     return -1;
+//                }
+//                return s1.peek();
+//           }
+//      }
+//      public static void main(String[] args) {
+//           Queue q=new Queue();
+//           q.add(1);
+//           q.add(2);
+//           q.add(3);
+//           q.add(4);
+//           q.add(5);
+//           while (!q.isEmpty()){
+//                System.out.println(q.peek());
+//                q.remove();
+//           }
+//      }
+// }
+
+// Trees
+// preorder traversal
+
+// public class list{
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static Node buildTree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node newnode=new Node(nodes[index]);
+//                newnode.left=buildTree(nodes);
+//                newnode.right=buildTree(nodes);
+//                return newnode;
+//           }
+//      }
+//      public static int preorder(Node root){
+//           if(root==null){
+//                return -1;
+//           }
+//           System.out.print(root.data+" ");
+//           preorder(root.left);
+//           preorder(root.right);
+//           return 0;
+
+//      }
+//      public static void main(String[] args){
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.buildTree(nodes);
+//           preorder(root);
+//      }
+// }
+
+// inorder Traversal
+// left-- root--right
+// public class list{
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static Node buildTree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node newnode=new Node(nodes[index]);
+//                newnode.left=buildTree(nodes);
+//                newnode.right=buildTree(nodes);
+//                return newnode;
+//           }
+//      }
+//      public static int inorder(Node root){
+//           if(root==null){
+//                return -1;
+//           }
+//           inorder(root.left);
+//           System.out.println(root.data);
+//           inorder(root.right);
+//           return 0;
+//      }
+//      public static void main(String[] args){
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.buildTree(nodes);
+//           inorder(root);
+//      }
+// }
+
+// postorder Traversal
+// left--right--root
+// public class list{
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static Node buildTree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node newnode=new Node(nodes[index]);
+//                newnode.left=buildTree(nodes);
+//                newnode.right=buildTree(nodes);
+//                return newnode;
+//           }
+//      }
+//      public static int postorder(Node root){
+//           if(root==null){
+//                return -1;
+//           }
+//           postorder(root.left);
+//           postorder(root.right);
+//           System.out.print(root.data+" ");
+//           return 0;
+
+//      }
+//      public static void main(String[] args){
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.buildTree(nodes);
+//           postorder(root);
+//      }
+// }
+
+// level order Trasveral
+// public class list{
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static Node buildTree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node newnode=new Node(nodes[index]);
+//                newnode.left=buildTree(nodes);
+//                newnode.right=buildTree(nodes);
+//                return newnode;
+//           }
+//      }
+//      public static void levelorder(Node root){
+//           if(root==null){
+//                return;
+//           }
+//           Queue<Node> q=new LinkedList<>();
+//           q.add(root);
+//           q.add(null);
+//           while(!q.isEmpty()){
+//                Node currNode=q.remove();
+//                if(currNode==null){
+//                     System.out.println();
+//                     if(q.isEmpty()){
+//                          break;
+//                     }
+//                     else{
+//                          q.add(null);
+//                     }
+//                }else{
+//                     System.out.print(currNode.data+" ");
+//                     if(currNode.left!=null){
+//                          q.add(currNode.left);
+//                     }
+//                     if(currNode.right!=null){
+//                          q.add(currNode.right);
+//                     }
+//                }
+//           }
+//      }
+//      public static void main(String[] args){
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.buildTree(nodes);
+//           levelorder(root);
+//      }
+// }
+
+// Question of Trees
+// 1
+// public class list{
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static Node buildTree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node newnode=new Node(nodes[index]);
+//                newnode.left=buildTree(nodes);
+//                newnode.right=buildTree(nodes);
+//                return newnode;
+//           }
+//      }
+//      public static int count(Node root){
+//           if(root==null){
+//                return 0;
+//           }
+//           int leftnode=count(root.left);
+//           int rightnode=count(root.right);
+//           return leftnode+rightnode+1;
+//      }
+//      public static void main(String[] args){
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.buildTree(nodes);
+//           System.out.println(count(root));
+//      }
+// }
+// 2 Sum of Nodes
+// public class list{
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static Node buildTree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node newnode=new Node(nodes[index]);
+//                newnode.left=buildTree(nodes);
+//                newnode.right=buildTree(nodes);
+//                return newnode;
+//           }
+//      }
+//      public static int sumoofNodes(Node root){
+//           if(root==null){
+//                return 0;
+//           }
+//           int leftnode=sumoofNodes(root.left);
+//           int rightnode=sumoofNodes(root.right);
+//           return leftnode+rightnode+root.data;
+//      }
+//      public static void main(String[] args){
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.buildTree(nodes);
+//           System.out.println(sumoofNodes(root));
+//      }
+// }
+
+// height of tree
+// public class list{
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static Node buildTree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node newnode=new Node(nodes[index]);
+//                newnode.left=buildTree(nodes);
+//                newnode.right=buildTree(nodes);
+//                return newnode;
+//           }
+//      }
+     // public static int height(Node root){
+     //      if(root==null){
+     //           return 0;
+     //      }
+     //      int leftheight=height(root.left);
+     //      int rightheight=height(root.right);
+     //      if(leftheight>rightheight){
+     //           return leftheight+1;
+     //      }
+     //      else{
+     //           return rightheight+1;
+     //      }
+     // }
+//      public static void main(String[] args){
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.buildTree(nodes);
+//           System.out.println(height(root));
+//      }
+// }
+
+// Diameter of tree
+// case1:- search the diameter through root
+// case2:- search the diameter not throught root
+// public class list{
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static Node buildTree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node newnode=new Node(nodes[index]);
+//                newnode.left=buildTree(nodes);
+//                newnode.right=buildTree(nodes);
+//                return newnode;
+//           }
+//      }
+//      public static int height(Node root){
+//           if(root==null){
+//                return 0;
+//           }
+//           int leftheight=height(root.left);
+//           int rightheight=height(root.right);
+//           if(leftheight>rightheight){
+//                return leftheight+1;
+//           }
+//           else{
+//                return rightheight+1;
+//           }
+//      }
+//      public static int diameter(Node root){
+//           if(root==null){
+//                return 0;
+//           }
+//           int leftnode=diameter(root.left);
+//           int rightnode=diameter(root.right);
+//           int bothnode=height(root.left)+height(root.right)+1;
+//           return Math.max(bothnode,Math.max(rightnode,leftnode));
+//      }
+//      public static void main(String[] args){
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.buildTree(nodes);
+//           System.out.println("the max diameter is:"+" "+diameter(root));
+//      }
+// }
+// other method
+// public class list{
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static Node buildTree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node newnode=new Node(nodes[index]);
+//                newnode.left=buildTree(nodes);
+//                newnode.right=buildTree(nodes);
+//                return newnode;
+//           }
+//      }
+//      public static int height(Node root){
+//           if(root==null){
+//                return 0;
+//           }
+//           int leftheight=height(root.left);
+//           int rightheight=height(root.right);
+//           if(leftheight>rightheight){
+//                return leftheight+1;
+//           }
+//           else{
+//                return rightheight+1;
+//           }
+//      }
+//      public static int diameter(Node root){
+//           if(root==null){
+//                return 0;
+//           }
+//           int leftnode=diameter(root.left);
+//           int rightnode=diameter(root.right);
+//           int bothnode=height(root.left)+height(root.right)+1;
+//           return Math.max(bothnode,Math.max(rightnode,leftnode));
+//      }
+//      public static class Treeinfo{
+//           int ht;
+//           int da;
+//           Treeinfo(int ht,int da){
+//                this.ht=ht;
+//                this.da=da;
+//           }
+//      }
+//      public static Treeinfo diameter2(Node root){
+//           if(root==null){
+//                return new Treeinfo(0, 0);
+//           }
+//           Treeinfo left=diameter2(root.left);
+//           Treeinfo right=diameter2(root.right);
+//           int myht=Math.max(left.ht,right.ht)+1;
+//           int dia=left.da;
+//           int dia1=right.da;
+//           int dia2=left.ht+right.ht+1;
+//           int myda=Math.max(dia2,Math.max(dia,dia1));
+//           Treeinfo myinfo=new Treeinfo(myht, myda);
+//           return myinfo;
+
+//      }
+//      public static void main(String[] args){
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.buildTree(nodes);
+//           System.out.println("the max diameter is:"+" "+diameter2(root).da);
+//      }
+// }
+
+// sum of nodes kth level
+// public class list{
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static Node buildTree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node newnode=new Node(nodes[index]);
+//                newnode.left=buildTree(nodes);
+//                newnode.right=buildTree(nodes);
+//                return newnode;
+//           }
+//      }
+//      public static void levelorder(Node root){
+//           Scanner sc=new Scanner(System.in);
+//           int k=sc.nextInt();
+//           if(root==null){
+//                return;
+//           }
+//           Queue<Node> q=new LinkedList<>();
+//           q.add(root);
+//           q.add(null);
+//           int sum=0;
+//           int currLevel=1;
+//           while(!q.isEmpty()){
+//                Node currNode=q.remove();
+//                if(currNode==null){
+//                     if(currLevel==k){
+//                          System.out.println(sum);
+//                     }
+//                     sum=0;
+//                     currLevel++;
+//                     if(q.isEmpty()){
+//                          break;
+//                     }
+//                     else{
+//                          q.add(null);
+//                     }
+//                }else{
+//                     sum+=currNode.data;
+//                     if(currNode.left!=null){
+//                          q.add(currNode.left);
+//                     }
+//                     if(currNode.right!=null){
+//                          q.add(currNode.right);
+//                     }
+//                }
+//           }
+//      }
+//      public static void main(String[] args){
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.buildTree(nodes);
+//           levelorder(root);
+//      }
+// }
