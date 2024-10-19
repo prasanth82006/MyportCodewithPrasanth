@@ -349,3 +349,271 @@
 //      }
 // }
 
+// Linked list in Queue
+// class Node{
+//      int data;
+//      Node link;
+// }
+// class Queue{
+//      Node front,rear;
+//      Queue(){
+//           rear=front=null;
+//      }
+//      public void Enqueue(int x){
+//           Node n=new Node();
+//           n.data=x;
+//           if(rear==null){
+//                rear=front=n;
+//           }
+//           rear.link=n;
+//           rear=n;
+//      }
+//      public void dequeue(){
+//           if(front==null){
+//                System.out.println("The Queue is Empty");
+//           }
+//           if(front==rear){
+//                front=rear=null;
+//           }
+//           front=front.link;
+//      }
+//      public void display(){
+//           Node n=front;
+//           if(n==null){
+//                System.out.println("The Queue is Empty");
+//           }
+//           while (n!=null){
+//                System.out.println(n.data);
+//                n=n.link;
+//           }
+//      }
+//      public static void main(String[] args) {
+//           Queue q=new Queue();
+//           q.Enqueue(1);
+//           q.Enqueue(2);
+//           q.Enqueue(3);
+//           q.dequeue();
+//           q.display();
+//      }
+// }
+
+
+
+// inorder tranversal
+// public class cat{
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static  Node buildtree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node n=new Node(nodes[index]);
+//                n.left=buildtree(nodes);
+//                n.right=buildtree(nodes);
+//                return n;
+//           }
+//      }
+//      public static void preorder(Node root){
+//           if(root==null){
+//                return;
+//           }
+//           System.out.println(root.data);
+//           preorder(root.left);
+//           preorder(root.right);
+//      }
+//      public static void main(String[] args){
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.buildtree(nodes);
+//           preorder(root);
+//      }
+// }
+
+// public class cat {
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=left;
+//                this.right=right;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public Node buildtree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node n=new Node(nodes[index]);
+//                n.left=buildtree(nodes);
+//                n.right=buildtree(nodes);
+//                return n;
+//           }
+//      }
+//      public static void preorder(Node root){
+//           if(root==null){
+//                return;
+//           }
+//           System.out.print(root.data);
+//           preorder(root.left);
+//           preorder(root.right);
+//      }
+//      public static void main(String[] args){
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.buildtree(nodes);
+//           preorder(root);
+//      }
+// }
+
+// public class cat {
+//      static class Node{
+//           int data;
+//           Node right;
+//           Node left;
+//           Node(int data){
+//                this.data=data;
+//                this.right=this.left=null;
+//           }
+//      }
+
+//      static class Binarytree{
+//           static int index=-1;
+//           public Node bulidtree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node n=new Node(nodes[index]);
+//                n.left=bulidtree(nodes);
+//                n.right=bulidtree(nodes);
+//                return n;
+//           }
+//      }
+//      public static void preorder(Node root){
+//           if(root==null){
+//                return;
+//           }
+//           System.out.println(root.data);
+//           preorder(root.right);
+//           preorder(root.left);
+//      }
+//      public static int  Count(Node root){
+//           if(root==null){
+//                return 0;
+//           }
+//           int leftnode=Count(root.left);
+//           int rightnode=Count(root.right);
+//           return leftnode+rightnode+1;
+//      }
+//      public static int Sum(Node root){
+//           if(root==null){
+//                return 0;
+//           }
+//           int leftnode=Sum(root.left);
+//           int rightnode=Sum(root.right);
+//           return leftnode+rightnode+root.data;
+//      }
+//      public static int Height(Node root){
+//           if(root==null){
+//                return 0;
+//           }
+//           int leftnode=Height(root.left);
+//           int rightnode=Height(root.right);
+//           if(leftnode>rightnode){
+//                return leftnode+1;
+//           }
+//           else{
+//                return rightnode+1;
+//           }
+//      }
+//      public static void main(String[] args) {
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree t=new Binarytree();
+//           Node root=t.bulidtree(nodes);
+//           preorder(root);
+//           System.out.println("The Count is:"+Count(root));
+//           System.out.println("The Sum of Nodes is:"+Sum(root));
+//           System.out.println("The Height is: "+Height(root));
+//      }
+// }
+
+// class Node {
+//      int data;
+//      Node left, right;
+//      Node(int data) {
+//          this.data = data;
+//          left = null;
+//          right = null;
+//      }
+//  }
+ 
+//  class Tree {
+//      public void insert(Node n, int data) {
+//          if (data < n.data) {
+//              if (n.left != null) {
+//                  insert(n.left, data);
+//              } else {
+//                  n.left = new Node(data);
+//              }
+//          } else if (data > n.data) {
+//              if (n.right != null) {
+//                  insert(n.right, data);
+//              } else {
+//                  n.right = new Node(data);
+//              }
+//          }
+//      }
+//      public Node searching(Node root, int search_data) {
+//          if (root == null) {
+//              return null;
+//          }
+//          if (search_data == root.data) {
+//              return root;
+//          } else if (search_data < root.data) {
+//              return searching(root.left, search_data);
+//          } else {
+//              return searching(root.right, search_data);
+//          }
+//      }
+//      public void display(Node root) {
+//           if (root != null) {
+//               display(root.left); 
+//               System.out.print(root.data + " ");
+//               display(root.right); 
+//           }
+//      }
+ 
+//      public static void main(String[] args) {
+//          Tree tree = new Tree();
+//          Node root = new Node(10);
+//          tree.insert(root, 5);
+//          tree.insert(root, 15);
+//          tree.insert(root, 3);
+//          tree.insert(root, 7);
+//          tree.insert(root, 12);
+//          tree.insert(root, 18);
+//          tree.display(root);
+//      //     Node result = tree.searching(root, 7);
+//      //     if (result != null) {
+//      //         System.out.println("Node found: " + result.data);
+//      //     } else {
+//      //         System.out.println("Node not found.");
+//      //     }
+//      }
+//  }
+ 

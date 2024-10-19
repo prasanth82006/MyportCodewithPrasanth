@@ -712,6 +712,8 @@ import java.util.*;
 //      }
 // }
 
+import org.w3c.dom.Node;
+
 // public class Tree {
 //      public static class Node{
 //           int data;
@@ -1250,4 +1252,1161 @@ import java.util.*;
 //      }
 // }
 
+// Double Linked List
+// class Node {
+//      int data;
+//      Node Rlink;
+//      Node Llink;
+//  }
+ 
+// class dList {
+//      Node start, end;
+ 
+//      dList() {
+//          start = end = null;
+//      }
+ 
+//      public void infront(int x) {
+//          Node n = new Node();
+//          n.data = x;
+//          if (start == null) {
+//              start = end = n;
+//          } else {
+//              n.Rlink = start;
+//              start.Llink = n;
+//              start = n;
+//          }
+//      }
+ 
+//      public void inrear(int x) {
+//          Node n = new Node();
+//          n.data = x;
+//          if (start == null) {
+//              start = end = n;
+//          } else {
+//              end.Rlink = n;
+//              n.Llink = end;
+//              end = n;
+//          }
+//      }
+//      public void addany(int x,int pos){
+//           Node temp;
+//           Node n=new Node();
+//           n.data=x;
+//           temp=start;
+//           if(pos==0){
+//                infront(x);
+//                return;
+//           }
+//           int k=1;
+//           while (temp!=null && k<pos){
+//                temp=temp.Rlink;
+//                k++;
+//           }
+//           if(temp==null){
+//                System.out.println("Position out of bounds");
+//                return;
+//           }
+//           if(temp==end){
+//                inrear(x);
+//                return;
+//           }
+//           n.Rlink=temp.Rlink;
+//           n.Llink=temp;
+//           if(temp.Rlink!=null){
+//                temp.Rlink.Llink=n;
+//           }
+//           temp.Rlink=n;
+//      }
+//      public void indel(){
+//           if(start==null){
+//                System.out.println("The Double List is Empty");
+//                return;
+//           }
+//           if(start==end){
+//                start=end=null;
+//           }
+//           start=start.Rlink;
+//           start.Llink=null;
+//      }
+//      public void endel(){
+//           if(start==null){
+//                System.out.println("The Double List is Empty");
+//                return;
+//           }
+//           if(start==end){
+//                start=end=null;
+//           }
+//           else{
+//                end=end.Llink;
+//                end.Rlink=null;
+//           }
+//      }
+//      public void delanyposition(int pos){
+//           if(start==null){
+//                System.out.println("The Double List is Empty");
+//                return;
+//           }
+//           if(pos<0){
+//                System.out.println("The position musst not be lesser than 0");
+//           }
+//           if(pos==0){
+//                indel();
+//                return;
+//           }
+//           Node temp=start;
+//           int k=0;
+//           while (temp!=null & k<pos){
+//                temp=temp.Rlink;
+//                k++;
+//           }
+//           if(temp==null){
+//                System.out.println("Position out of bounds");
+//                return;
+//           }
+//           if (temp == end) {
+//                endel();
+//                return;
+//           }
+//           temp.Llink.Rlink=temp.Rlink;
+//           if(temp.Rlink!=null){
+//                temp.Rlink.Llink=temp.Llink;
+//           }
+//      }
+//      public void reverse(){
+//           if(start==null){
+//                System.out.println("The Doubly Linked List is Empty");
+//                return;
+//           }
+//           Node current=start;
+//           Node temp=null;
+//           while (current!=null){
+//                temp=current.Llink;
+//                current.Llink=current.Rlink;
+//                current.Rlink=temp;
+//                current=current.Llink;
+//           }
+//           start=temp.Llink;
+//      }
+//      public void fDisplay() {
+//          Node n = start;
+//          while (n != null) {
+//              System.out.println(n.data);
+//              n = n.Rlink;
+//          }
+//      }
+//      public void bDisplay() {
+//          Node n = end;
+//          while (n != null) {
+//              System.out.println(n.data);
+//              n = n.Llink;
+//          }
+//      }
+//      public static void main(String[] args) {
+//          dList d = new dList();
+//          d.infront(1);
+//          d.inrear(2);
+//          d.inrear(3);
+//          d.inrear(4);
+//          d.addany(6,2);
+//          d.indel();
+//          d.endel();
+//           d.delanyposition(3);
+//           d.reverse();
+//          d.fDisplay();
+//          System.out.println();
+//          d.bDisplay();
+//      }
+//  }
+ 
+// class CQueue{
+//      int arr[]=new int[5];
+//      int front=-1;
+//      int rear=-1;
+//      public void Enqueue(int x){
+//           if(rear==-1){
+//                rear=0;
+//                front=0;
+//                arr[rear]=x;
+//           }
+//           else{
+//                int next=(rear+1)%4;
+//                if(rear==next){
+//                     System.out.println("The cqueue is Full");
+//                }
+//                else{
+//                     rear=next;
+//                     arr[rear]=x;
+//                }
+//           }
+//      }
+//      public void dequeue(){
+//           if(front==-1){
+//                System.out.println("The CQueue is Empty");
+//           }
+//           else{
+//                if(rear==front){
+//                     rear=front=-1;
+//                }
+//                else{
+//                     front=(front+1)%4;
+//                }
+//           }
+//      }
+//      public void display(){
+//           if(front==-1){
+//                System.out.println("The Cqueue is Empty");
+//           }
+//           else{
+//                int t=front;
+//                while (t!=rear){
+//                     System.out.println(arr[t]);
+//                     t=(t+1)%4;
+//                }
+//                System.out.println(arr[rear]);
+//           }
+//      }
+//      public static void main(String[] args) {
+//           CQueue c=new CQueue();
+//           c.Enqueue(1);
+//           c.Enqueue(2);
+//           c.Enqueue(3);
+//           c.Enqueue(4);
+//           c.display();
+//      }
+// }
 
+// class Node{
+//      Node Rlink;
+//      Node Llink;
+//      int data;
+// }
+// class Cd{
+//      Node start,end;
+//      Cd(){
+//           start=end=null;
+//      }
+//      public void addFirst(int x){
+//           Node n=new Node();
+//           n.data=x;
+//           if(start==null){
+//                start=end=n;
+//                n.Llink=n.Rlink=n;
+//           }
+//           else{
+//                n.Rlink=start;
+//                n.Llink=end;
+//                start.Llink=n;
+//                end.Rlink=n;
+//                start=n;
+//           }
+//      }
+//      public void addLast(int x){
+//           Node n=new Node();
+//           n.data=x;
+//           if(start==null){
+//                start=end=n;
+//                n.Llink=n.Rlink=n;
+//           }
+//           else{
+//                end.Rlink=n;
+//                n.Llink=end;
+//                n.Rlink=start;
+//                start.Llink=n;
+//                end=n;
+//           }
+//      }
+//      public void addPost(int x,int pos){
+//           Node n=new Node();
+//           n.data=x;
+//           if(pos==0){
+//                addFirst(x);
+//           }
+//           Node temp=start;
+//           int k=1;
+//           while (temp!=end && k<pos){
+//                temp=temp.Rlink;
+//                k++;
+//           }
+//           if(temp==end){
+//                addLast(x);
+//                return;
+//           }
+//           n.Rlink=temp.Rlink;
+//           n.Llink=temp;
+//           if(temp.Rlink!=null){
+//                temp.Rlink.Llink=n;
+//           }
+//           temp.Rlink=n;
+//      }
+//      public void delFirst(){
+//           if(start==null){
+//                System.out.println("The Double Linked list is Empty");
+//                return;
+//           }
+//           if (start==end){
+//                start=end=null;
+//           }
+//           else{
+//                start=start.Rlink;
+//                start.Llink=end;
+//                end.Rlink=start;
+//           }
+//      }
+//      public void delEnd(){
+//           if(start==null){
+//                System.out.println("The Double Linked list is Empty");
+//                return;
+//           }
+//           if(start==end){
+//                start=end=null;
+//           }
+//           else{
+//                end=end.Llink;
+//                end.Rlink=start;
+//                start.Llink=end;
+//           }
+//      }
+//      public void delpos(int pos){
+//           if(pos==0){
+//                delFirst();
+//                return;
+//           }
+//           Node temp=start;
+//           int k=0;
+//           while (temp!=null && k<pos){
+//                temp=temp.Rlink;
+//                k++;
+//           }
+//           if(temp==null){
+//                delEnd();
+//                return;
+//           }
+//           temp.Rlink.Llink=temp.Llink;
+//           temp.Llink.Rlink=temp.Rlink;
+          
+//      }
+//      public void reverse(){
+//           if(start==null){
+//                System.out.println("The Doubly Linked List is Empty");
+//                return;
+//           }
+//           Node current=start;
+//           Node temp=null;
+//           do {
+//                temp = current.Llink;
+//                current.Llink = current.Rlink;
+//                current.Rlink = temp;
+//                current = current.Llink;
+//            } while (current != start);
+//           start=temp.Llink;
+//      }
+//      public void fDisplay(){
+//           if(start==null){
+//                System.out.println("The Double Linked list is Empty");
+//           }
+//           else{
+//                Node n=start;
+//                do{
+//                     System.out.println(n.data);
+//                     n=n.Rlink;
+//                }while(n!=start);
+
+//           }
+//      }
+//      public void bDisplay(){
+//           if(start==null){
+//                System.out.println("The Double Linked list is Empty");
+//           }
+//           else{
+//                Node n=start;
+//                do{
+//                     System.out.println(n.data);
+//                     n=n.Llink;
+//                }while(n!=start);
+
+//           }
+//      }
+//      public static void main(String[] args) {
+//           Cd d=new Cd();
+//           d.addFirst(1);
+//           d.addLast(2);
+//           d.addLast(3);
+//           d.addLast(4);
+//           d.addLast(5);
+//           d.delFirst();
+//           d.delEnd();
+//           d.addPost(5, 1);
+//           d.delpos(1);
+//           d.reverse();
+//           d.fDisplay();
+//      }
+// }
+
+//Binary Tree
+// preorder tranversal(root,leftsubtree,righttree) 1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1
+// public class Tree{
+//      static class Node {
+//          int data;
+//          Node left;
+//          Node right;
+ 
+//          Node(int data) {
+//              this.data = data;
+//              this.left = null;
+//              this.right = null;
+//          }
+//      }
+ 
+//      static class BinaryTree {
+//          static int index = -1;
+ 
+//          // Method to build the binary tree
+//          public static Node buildTree(int nodes[]) {
+          //    index++;
+          //    if (index >= nodes.length || nodes[index] == -1) {  // Corrected condition
+          //        return null;
+          //    }
+          //    Node newNode = new Node(nodes[index]);
+          //    newNode.left = buildTree(nodes);
+          //    newNode.right = buildTree(nodes);
+          //    return newNode;
+//          }
+//      }
+ 
+//      // Preorder traversal method
+     // public static void preorder(Node root) {
+     //     if (root == null) {
+     //         return;
+     //     }
+     //     System.out.print(root.data + " ");
+     //     preorder(root.left);
+     //     preorder(root.right);
+     // }
+ 
+//      public static void main(String[] args) {
+     //     int nodes[] = {25, 20, 10, -1, -1, 22, -1, -1, 36, 30, 28, -1, -1, -1, 40, -1, -1};  // Fixed input
+     //     BinaryTree tree = new BinaryTree();
+     //     Node root = tree.buildTree(nodes);
+     //     preorder(root);
+//      }
+//  }
+ 
+
+
+// inorder tranversal
+// public class Tree {
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static Node bulidtree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node newNode=new Node(nodes[index]);
+//                newNode.left=bulidtree(nodes);
+//                newNode.right=bulidtree(nodes);
+//                return newNode;
+//           }
+//      }
+//      public static void inoder(Node root){
+//           if(root==null){
+//                return;
+//           }
+
+//           inoder(root.left);
+//           System.out.println(root.data);
+//           inoder(root.right);
+//      }
+//      public static void main(String[] args) {
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.bulidtree(nodes);
+//           inoder(root);
+//      }
+// }
+
+// postorder tranversal
+// public class Tree {
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static Node bulidtree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node newNode=new Node(nodes[index]);
+//                newNode.left=bulidtree(nodes);
+//                newNode.right=bulidtree(nodes);
+//                return newNode;
+//           }
+//      }
+     // public static void postoder(Node root){
+     //      if(root==null){
+     //           return;
+     //      }
+     //      postoder(root.left);
+     //      postoder(root.right);
+     //      System.out.println(root.data);
+     // }
+//      public static void main(String[] args) {
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.bulidtree(nodes);
+//           postoder(root);
+//      }
+// }
+
+// levelorder tranversal
+// public class Tree {
+//      static class Node{
+//           int data;
+//           Node left;
+//           Node right;
+//           Node(int data){
+//                this.data=data;
+//                this.left=null;
+//                this.right=null;
+//           }
+//      }
+//      static class Binarytree{
+//           static int index=-1;
+//           public static Node bulidtree(int nodes[]){
+//                index++;
+//                if(nodes[index]==-1){
+//                     return null;
+//                }
+//                Node newNode=new Node(nodes[index]);
+//                newNode.left=bulidtree(nodes);
+//                newNode.right=bulidtree(nodes);
+//                return newNode;
+//           }
+//      }
+     // public static void levelorder(Node root){
+     //      if(root==null){
+     //           return;
+     //      }
+     //      Queue<Node> q=new LinkedList<>();
+     //      q.add(root);
+     //      q.add(null);
+     //      while (!q.isEmpty()){
+     //           Node curNode=q.remove();
+     //           if(curNode==null){
+     //                System.out.print("\n");
+     //                if(q.isEmpty()){
+     //                     break;
+     //                }
+     //                else{
+     //                     q.add(null);
+     //                }
+     //           }
+     //           else{
+     //                System.out.print(curNode.data);
+     //                if(curNode.left!=null){
+     //                     q.add(curNode.left);
+     //                }
+     //                if(curNode.right!=null){
+     //                     q.add(curNode.right);
+     //                }
+     //           }
+     //      }
+     // }
+//      public static void postoder(Node root){
+//           if(root==null){
+//                return;
+//           }
+//           postoder(root.left);
+//           postoder(root.right);
+//           System.out.println(root.data);
+//      }
+//      public static int count(Node root){
+//           if(root==null){
+//                return 0;
+//           }
+//           int leftnodes=count(root.left);
+//           int rightnode=count(root.right);
+//           return leftnodes+rightnode+1;
+//      }
+//      public static int sum(Node root){
+//           if(root==null){
+//                return 0;
+//           }
+//           int leftsum=sum(root.left);
+//           int righttsum=sum(root.right);
+//           return leftsum+righttsum+root.data;
+//      }
+//      public static int height(Node root){
+//           if(root==null){
+//                return 0;
+//           }
+//           int leftheight=height(root.left);
+//           int rightheight=height(root.right);
+//           if(leftheight>rightheight){
+//                return leftheight+1;
+//           }
+//           else{
+//                return rightheight+1;
+//           }
+//      }
+//      public static int diameter(Node root){
+//           if(root==null){
+//                return 0;
+//           }
+//           int leftdiameter=diameter(root.left);
+//           int rightdiameter=diameter(root.right);
+//           int total=height(root.left)+height(root.right)+1;
+//           int result=Math.max(total,Math.max(leftdiameter,rightdiameter));
+//           return result;
+
+//      }
+     
+//      public static void main(String[] args) {
+//           int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//           Binarytree tree=new Binarytree();
+//           Node root=tree.bulidtree(nodes);
+//           postoder(root);
+//           System.out.println("The Count: "+count(root));
+//           System.out.println("The sum: "+sum(root));
+//           System.out.println("The height: "+height(root));
+//           System.out.println("The diameter: "+diameter(root));
+
+//      }
+// }
+
+// class Node{
+//      int data;
+//      Node Rlink;
+//      Node llink;
+// }
+// class DList{
+//      Node start,end;
+//      DList(){
+//           start=end=null;
+//      }
+//      public void addFirst(int x){
+//           Node n=new Node();
+//           n.data=x;
+//           if(start==null){
+//                start=end=n;
+//           }
+//           else{
+//                n.Rlink=start;
+//                start.llink=n;
+//                start=n;
+//           } 
+//      }
+//      public void addEnd(int x){
+//           Node n=new Node();
+//           n.data=x;
+//           if(start==null){
+//                start=end=n;
+//           }
+//           else{
+//                n.llink=end;
+//                end.Rlink=n;
+//                end=n;
+//           }
+//      }
+//      public void addanypos(int x,int pos){
+//           Node n=new Node();
+//           n.data=x;
+//           Node temp=start;
+//           int k=1;
+//           if(pos<0){
+//                System.out.println("The pos must be Greater than 0");
+//                return;
+//           }
+//           if(pos==0){
+//                addFirst(x);
+//                return;
+//           }
+//           while (temp!=null && k<pos){
+//                temp=temp.Rlink;
+//                k++;
+//           }
+//           if(temp==null){
+//                System.out.println("Position out of bounds");
+//                return;
+//           }
+//           if(temp==end){
+//                addEnd(x);
+//                return;
+//           }
+//           n.Rlink=temp.Rlink;
+//           n.llink=temp;
+//           if(temp.Rlink!=null){
+//                temp.Rlink.llink=n;
+//           }
+//           temp.Rlink=n;
+//      }
+//      public void delFirst(){
+//           if(start==null){
+//                System.out.println("The Dlist is Empty");
+//           }
+//           start=start.Rlink;
+//           start.llink=null;
+//      }
+//      public void delEnd(){
+//           if(start==null){
+//                System.out.println("The Dlist is Empty");
+//                return;
+//           }
+//           if(start==end){
+//                start=end=null;
+//                return;
+//           }
+//           end=end.llink;
+//           end.Rlink=null;
+//      }
+//      public void delany(int pos){
+//           Node temp=start;
+//           int k=0;
+//           if(pos<0){
+//                System.out.println("The pos must be Greater than 0");
+//                return;
+//           }
+//           if(pos==0){
+//                delFirst();
+//                return;
+//           }
+//           while (temp!=null && k<pos){
+//                temp=temp.Rlink;
+//                k++;
+//           }
+//           if(temp==null){
+//                System.out.println("Position out of bounds");
+//                return;
+//           }
+//           if (temp == end) {
+//                delEnd();
+//                return;
+//           }
+//           temp.llink.Rlink=temp.Rlink;
+//           if(temp.Rlink!=null){
+//                temp.Rlink.llink=temp.llink;
+//           }
+//      }
+//      public void reverse(){
+//           if(start==null){
+//                System.out.println("The Dlist is Empty");
+//           }
+//           Node current=start;
+//           Node temp=null;
+//           while (current!=null){
+//                temp=current.llink;
+//                current.llink=current.Rlink;
+//                current.Rlink=temp;
+//                current=current.llink;
+//           }
+//           start=temp.llink;
+//      }
+//      public void fDisplay(){
+//           Node n=start;
+//           while (n!=null) {
+//                System.out.println(n.data);
+//                n=n.Rlink;
+//           }
+//      }
+//      public void BDisplay(){
+//           Node n=end;
+//           while (n!=null) {
+//                System.out.println(n.data);
+//                n=n.llink;
+//           }
+//      }
+//      public static void main(String[] args) {
+//           DList d=new DList();
+//           d.addFirst(1);
+//           d.addEnd(2);
+//           d.addEnd(3);
+//           d.addEnd(4);
+//           d.addanypos(5, 4);
+//           d.delFirst();
+//           d.delEnd();
+//           d.delany(2);
+//           d.fDisplay();
+//           // System.out.println();
+//           // d.BDisplay();
+//      }
+// }
+
+
+// class Node{
+//      int data;
+//      Node left,right;
+//      Node(int data){
+//           this.right=null;
+//           this.left=null;
+//           this.data=data;
+//      }
+// }
+
+// class tree{
+//      public static Node create(){
+//           int data;
+//           Scanner sc=new Scanner(System.in);
+//           Node root=null;
+//           System.out.println("Enter Value");
+//           data=sc.nextInt();
+//           if(data==-1){
+//                return null;
+//           }
+//           root=new Node(data);
+//           System.out.println("Enter left child of:"+root.data);
+//           root.left=create();
+//           System.out.println("Enter right Child of:"+root.data);
+//           root.right=create();
+//           return root;
+//      }
+     
+//      public static void inorder(Node root){
+//           if(root==null){
+//                return;
+//           }
+//           inorder(root.left);
+//           System.out.println(root.data);
+//           inorder(root.right);
+//      }
+//      public static void postoder(Node root){
+//           if(root==null){
+//                return;
+//           }
+//           postoder(root.left);
+//           postoder(root.right);
+//           System.out.println(root.data);
+//      }
+//      public static void preorder(Node root){
+//           if(root==null){
+//                return;
+//           }
+//           System.out.println(root.data);
+//           preorder(root.left);
+//           preorder(root.right);
+
+//      }
+//      public static Node Find(Node root){
+//           while (root.left!=null){
+//                root=root.left;
+//           }
+//           return root;
+//      }
+//      public static void main(String[] args) {
+//           Node root=create();
+//           preorder(root);
+//           System.out.println("\n");
+//           postoder(root);
+//           System.out.println("\n");
+//           inorder(root);
+//      }
+
+// }
+
+// class Node{
+//      int data;
+//      Node left;
+//      Node right;
+//      Node(int data){
+//           this.left=null;
+//           this.data=data;
+//           this.right=null;
+//      }
+// }
+// class Tree{
+//      public void insert(Node n,int data){
+//           if(data<n.data){
+//                if(n.left!=null){
+//                     insert(n.left, data);
+//                }
+//                else{
+//                     n.left=new Node(data);
+//                }
+//           }
+//           else if(data>n.data){
+//                if(n.right!=null){
+//                     insert(n.right, data);
+//                }
+//                else{
+//                     n.right=new Node(data);
+//                }
+//           }
+//      }
+//      public Node searching(Node root,int search_data){
+//           if(root==null){
+//                return null;
+//           }
+//           if(search_data==root.data){
+//                return root;
+//           }
+//           else if(search_data<root.data){
+//                return searching(root.left,search_data);
+//           }
+//           else{
+//                return searching(root.right, search_data);
+//           }
+//      }
+//      public Node inorderSuccessor(Node root){
+//           while (root.left!=null){
+//                root=root.left;
+//           }
+//           return root;
+//      }
+//      public Node delete(Node root,int data){
+//           if(root==null){
+//                return null;
+//           }
+//           if(data<root.data){
+//                return delete(root.left, data);
+//           }
+//           else if(data>root.data){
+//                return delete(root.right, data);
+//           }
+//           else{
+//                if(root.left==null){
+//                     return root.right;
+//                }
+//                else if(root.right==null){
+//                     return root.left;
+//                }
+//                Node min=inorderSuccessor(root.left);
+//                root.data=min.data;
+//                root.right=delete(root.right, min.data);
+//           }
+//           return root;
+//      }
+//      public void display(Node root){
+//           if(root!=null){
+//                display(root.left);
+//                System.out.println(root.data+" ");
+//                display(root.right);
+//           }
+//      }
+//      public static void main(String[] args) {
+//           Tree tree=new Tree();
+//           Node root=new Node(10);
+//           tree.insert(root, 5);
+//          tree.insert(root, 15);
+//          tree.insert(root, 3);
+//          tree.insert(root, 7);
+//          tree.insert(root, 12);
+//          tree.insert(root, 18);
+//          tree.delete(root, 10);
+//           tree.display(root);
+//      }
+// }
+
+
+// class Node{
+//      int data;
+//      Node left;
+//      Node right;
+//      Node(int data){
+//           this.data=data;
+//           this.left=null;
+//           this.right=null;
+//      }
+// }
+// class Tree{
+//      public void insert(Node n,int data){
+//           if(data<n.data){
+//                if(n.left!=null){
+//                     insert(n.left, data);
+//                }
+//                else{
+//                     n.left=new Node(data);
+//                }
+//           }
+//           else if(data>n.data){
+//                if(n.right!=null){
+//                     insert(n.right, data);
+//                }
+//                else{
+//                     n.right=new Node(data);
+//                }
+//           }
+//      }
+//      public Node searching(Node root,int search_data){
+//           if(root==null){
+//                return null;
+//           }
+//           if(search_data==root.data){
+//                return root;
+//           }
+//           else if(search_data<root.data){
+//                return searching(root.left, search_data);
+//           }
+//           else{
+//                return searching(root.right, search_data);
+//           }
+//      }
+//      public Node inorderSuccessor(Node root){
+//           while (root.left!=null){
+//                root=root.left;
+//           }
+//           return root;
+//      }
+//      public Node delete(Node root, int data) {
+//           if (root == null) {
+//               return null;
+//           }
+//           if (data < root.data) {
+//               root.left = delete(root.left, data);
+//           } else if (data > root.data) {
+//               root.right = delete(root.right, data);
+//           } else {
+//               if (root.left == null) {
+//                   return root.right;
+//               } else if (root.right == null) {
+//                   return root.left;
+//               } else {
+//                   Node min = inorderSuccessor(root.right);
+//                   root.data = min.data;
+//                   root.right = delete(root.right, min.data);
+//               }
+//           }
+//           return root;
+//       }
+//      public void display(Node root){
+//           if(root!=null){
+//                System.out.println(root.data+" ");
+//                display(root.left);
+//                display(root.right);
+//           }
+//      }
+//      public static void main(String[] args) {
+//           Tree tree=new Tree();
+//           Node root=new Node(10);
+//           tree.insert(root, 1);
+//           tree.insert(root, 2);
+//           tree.insert(root, 3);
+//           tree.insert(root, 4);
+//           tree.delete(root,2);
+//           tree.display(root);
+//           Node result=tree.searching(root, 5);
+//           if(result!=null){
+//                System.out.println("The Element is Found");
+//           }
+//           else{
+//                System.out.println("Not Found");
+//           }
+//      }
+// }
+
+// class Node{
+//      int data;
+//      Node left;
+//      Node right;
+//      Node(int data){
+//           this.data=data;
+//           this.left=null;
+//           this.right=null;
+//      }
+// }
+// class Tree {
+//      public Node CreateBinary(){
+//           System.out.print("Enter Node data (input -1 for no child): ");
+//           Scanner sc=new Scanner(System.in);
+//           int data=sc.nextInt();
+//           if(data==-1){
+//                return null;
+//           }
+//           Node current=new Node(data);
+//           System.out.println("Creating left child of:"+data);
+//           current.left=CreateBinary();
+//           System.out.println("The Creating right of:"+data);
+//           current.right=CreateBinary();
+//           return current;
+//      }
+//      public boolean search(Node root,int data){
+//           if(root==null){
+//                return false;
+//           }
+//           if(root.data==data){
+//                return true;
+//           }
+//           return search(root.left, data) || search(root.right, data);
+//      }
+//      public Node delete(Node root,int data){
+//           if(root==null){
+//                return null;
+//           }
+//           if(root.data==data){
+//                if(root.left==null && root.right==null){
+//                     return null;
+//                }
+//                if(root.left==null){
+//                     return root.right;
+//                }
+//                if(root.right==null){
+//                     return root.left;
+//                }
+//                Node rightmost = findRightmost(root.right);
+//                root.data = rightmost.data;
+//                root.right = delete(root.right, rightmost.data);
+//                }
+//                else {
+//                     root.left = delete(root.left, data);
+//                     root.right = delete(root.right, data);
+//                }
+//            return root;
+//        }
+//        private Node findRightmost(Node node) {
+//            while (node.right != null) {
+//                node = node.right;
+//            }
+//            return node;
+//        }
+   
+//      public void preorder(Node root){
+//           if(root==null){
+//                return;
+//           }
+//           System.out.println(root.data);
+//           preorder(root.left);
+//           preorder(root.right);
+//      }
+//      public void inorder(Node root){
+//           if(root==null){
+//                return;
+//           }
+//           inorder(root.left);
+//           System.out.println(root.data);
+//           inorder(root.right);
+//      }
+//      public void postoder(Node root){
+//           if(root==null){
+//                return;
+//           }
+//           postoder(root.left);
+//           postoder(root.right);
+//           System.out.println(root.data);
+//      }
+//      public static void main(String[] args) {
+//           Tree tree=new Tree();
+//           Scanner sc=new Scanner(System.in);
+//           Node root=tree.CreateBinary();
+//           tree.inorder(root);
+//           System.out.println("Enter the element to search: ");
+//           int search_name=sc.nextInt();
+//           System.out.println(tree.search(root,search_name));
+//      }
+// }

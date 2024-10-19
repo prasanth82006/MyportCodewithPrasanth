@@ -4,20 +4,20 @@ body{
     font: size 15px;
     background-color: #f0f8ff;
 }
-
 header{
     height: 100vh;
     background-color: #2196f3;
-    color: white;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/544/710/original/black-abstract-background-vector-gray-abstract-modern-design-background-for-report-and-project-presentation-template-vector-illustration-graphic-dot-and-circular-shape-product-advertising-present.jpg);
     flex-wrap: wrap;
 }
 h1{
     font-size: 3rem;
-    color:#2196f3;
+    color:rgb(153, 46, 16);
 }
 header h1{
     margin:0;
@@ -27,13 +27,16 @@ header h1{
 .click{
     height: 30px;
     width: 80px;
-    color:blue;
+    color:rgb(55, 214, 108);
     border:none;
     margin:0;
     border-style: none;
 }
 .click:hover{
-    background-color: lightgrey;
+    background-color: rgb(91, 60, 201);
+}
+p{
+     color:black;
 }
 button{
     margin:10px;
@@ -74,6 +77,7 @@ section{
     border-radius:20px;
     margin-bottom: 20px;
     display: flex;
+    color: white;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
@@ -129,11 +133,50 @@ footer{
     background-color: black;
     color:lightgrey;
 }
- footer .last {
+.nam{
      display: flex;
      flex-direction: row;
      align-items: center;
      justify-content: center;
      margin: 10px;
      padding: 10px;
+ }
+footer .last {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     margin: 10px;
+     padding: 10px;
+ }
+ .Gen{
+     display: flex;
+     align-items: center;
+ }
+ .Gen input[type="radio"]{
+     width: 16px;
+     height: 16px;
+     margin-right:10px;
+ }
+ .Gen{
+     font-size: 16px;
+     color: #333;
+ }
+ .contact {
+     display: flex;
+     align-items: center;
+ }
+ 
+ .contact input[type="checkbox"] {
+     margin-right: 10px;
+     width: 16px;
+     height: 16px;
+ }
+ 
+ .contact label {
+     font-size: 16px;
+     color: #333;
+ }
+ .nt{
+     width: 325px;
  }
