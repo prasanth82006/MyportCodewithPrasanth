@@ -100,30 +100,30 @@ import harry.savingsaccount;
 
 // Quick Sort
 // public class sort{
-     // public static void QuickSort(int arr[],int f,int e){
-     //      if(f<e){
-     //           int p=partition(arr,f,e);
-     //           QuickSort(arr,f,p-1);
-     //           QuickSort(arr,p+1,e);
-     //      }
-     // }
-     // public static int partition(int arr[],int f,int e){
-     //      int p=arr[e];
-     //      int i=f-1;
-     //      for(int j=f;j<e;j++){
-     //           if(arr[j]>p){
-     //                i++;
-     //                int temp=arr[i];
-     //                arr[i]=arr[j];
-     //                arr[j]=temp;
-     //           }
-     //      }
-     //      i++;
-     //      int temp=arr[i];
-     //      arr[i]=p;
-     //      arr[e]=temp;
-     //      return i;
-     // }
+//      public static void QuickSort(int arr[],int f,int e){
+//           if(f<e){
+//                int p=partition(arr,f,e);
+//                QuickSort(arr,f,p-1);
+//                QuickSort(arr,p+1,e);
+//           }
+//      }
+//      public static int partition(int arr[],int f,int e){
+//           int p=arr[e];
+//           int i=f-1;
+//           for(int j=f;j<e;j++){
+//                if(arr[j]>p){
+//                     i++;
+//                     int temp=arr[i];
+//                     arr[i]=arr[j];
+//                     arr[j]=temp;
+//                }
+//           }
+//           i++;
+//           int temp=arr[i];
+//           arr[i]=p;
+//           arr[e]=temp;
+//           return i;
+//      }
 //      public static void main(String[] args) {
 //           int arr[]={7,8,3,1,2};
 //           int n=arr.length;
@@ -496,5 +496,4 @@ import harry.savingsaccount;
 //           System.out.println(Arrays.toString(arr));     
 //      }
 // }
-
 

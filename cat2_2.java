@@ -314,4 +314,63 @@ import harry.f1.f2.rectangle;
 //           p.display();
 //      }
 // }
+  
+// public class cat2_2 {
+//      public static void main(String[] args) {
+//           int arr[]={3,2,1,7,8};
+//           Scanner sc=new Scanner(System.in);
+//           int a=sc.nextInt();
+//           int i=0;
+//           for(i=0;i<arr.length;i++){
+//                if(arr[i]==a){
+//                     System.out.println("The Element is Found at "+i);
+//                     break;
+//                }
+//           }
+//           if(i==arr.length){
+//                System.out.println("Element is not Found");
+//           }
+//      }
+// }
+
+// Linear Search time complexity
+// BC:-O(1);
+// WC:-O(n);
+
+
+// public class cat2_2 {
+//      public static void main(String[] args) {
+//           int arr[]={1,2,3,4,5,6,7,8,9};
+//           int l=0;
+//           Scanner sc=new Scanner(System.in);
+//           int r=arr.length;
+//           int mid;
+//           int a=sc.nextInt();
+//           boolean found=false;
+//           int index;
+//           while (l<r){
+//                mid=(l+r)/2;
+//                if(a==arr[mid]){
+//                     index=mid;
+//                     System.out.println("The Element is Found at Index: "+index);
+//                     found=true;
+//                     break;
+//                }
+//                else if(a<mid){
+//                     r=mid-1;
+//                }
+//                else{
+//                     l=mid+1;
+//                }
+//           }
+//           if(!found){
+//                System.out.println("The Element is Not found");
+//           }
+
+//      }
+// }
+
+// time complexity
+ // BC:-O(1)
+// WC:-O(logn)
 
