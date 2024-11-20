@@ -374,3 +374,212 @@ import harry.f1.f2.rectangle;
  // BC:-O(1)
 // WC:-O(logn)
 
+// class HashTable {
+//     private int[] table;
+//     private int[] values;
+//     private int size;
+//     private int capacity;
+
+//     // Constructor
+//     public HashTable(int capacity) {
+//         this.capacity = capacity;
+//         this.size = 0;
+//         this.table = new int[capacity];
+//         this.values = new int[capacity];
+//         for (int i = 0; i < capacity; i++) {
+//             table[i] = -1;
+//         }
+//     }
+//     private int hash1(int key) {
+//         return key % capacity;
+//     }
+//     private int hash2(int key) {
+//         return 7 - (key % 7); 
+//     }
+//      public void insert(int key, int value) {
+//         if (size >= capacity) {
+//             System.out.println("Hash table is full");
+//             return;
+//         }
+//         int index = hash1(key);
+//         int stepSize = hash2(key);
+//         while (table[index] != -1 && table[index] != key) {
+//             index = (index + stepSize) % capacity;
+//         }
+//         table[index] = key;
+//         values[index] = value;
+//         size++;
+//     }
+//     public Integer search(int key) {
+//         int index = hash1(key);
+//         int stepSize = hash2(key);
+//         while (table[index] != -1) {
+//             if (table[index] == key) {
+//                 return values[index];
+//             }
+//             index = (index + stepSize) % capacity;
+//         }
+//         return null; 
+//     }
+//     public void delete(int key) {
+//         int index = hash1(key);
+//         int stepSize = hash2(key);
+//         while (table[index] != -1) {
+//             if (table[index] == key) {
+//                 table[index] = -1;
+//                 values[index] = 0; 
+//                 size--;
+//                 System.out.println("Key " + key + " deleted.");
+//                 return;
+//             }
+//             index = (index + stepSize) % capacity;
+//         }
+//         System.out.println("Key " + key + " not found.");
+//     }
+//     public void display() {
+//         System.out.println("Hash Table:");
+//         for (int i = 0; i < capacity; i++) {
+//             if (table[i] != -1) {
+//                 System.out.println("Key: " + table[i] + ", Value: " + values[i]);
+//             } else {
+//                 System.out.println("Slot " + i + " is empty");
+//             }
+//         }
+//     }
+//     public static void main(String[] args) {
+//         HashTable ht = new HashTable(10);
+//         ht.insert(10, 100);
+//         ht.insert(20, 200);
+//         ht.insert(30, 300);
+//         ht.insert(25, 250);
+//         ht.insert(35, 350);
+//         ht.display();
+//         int searchKey = 25;
+//         Integer value = ht.search(searchKey);
+//         if (value != null) {
+//             System.out.println("Value for key " + searchKey + ": " + value);
+//         } else {
+//             System.out.println("Key " + searchKey + " not found.");
+//         }
+//         ht.delete(25);
+//         ht.display();
+//     }
+// }
+
+// class HashTable {
+//     private LinkedList<Entry>[] table;
+//     private int capacity;
+//     private static class Entry {
+//         int key;
+//         int value;
+
+//         Entry(int key, int value) {
+//             this.key = key;
+//             this.value = value;
+//         }
+//     }
+//     public HashTable(int capacity) {
+//         this.capacity = capacity;
+//         table = new LinkedList[capacity];
+//         for (int i = 0; i < capacity; i++) {
+//             table[i] = new LinkedList<>(); 
+//         }
+//     }
+//     private int hash(int key) {
+//         return key % capacity;
+//     }
+//     public void insert(int key, int value) {
+//         int index = hash(key);
+//         LinkedList<Entry> bucket = table[index];
+//         for (Entry entry : bucket) {
+//             if (entry.key == key) {
+//                 entry.value = value;
+//                 return;
+//             }
+//         }
+//         bucket.add(new Entry(key, value));
+//     }
+//     public Integer search(int key) {
+//         int index = hash(key);
+//         LinkedList<Entry> bucket = table[index];
+//         for (Entry entry : bucket) {
+//             if (entry.key == key) {
+//                 return entry.value;
+//             }
+//         }
+//         return null;
+//     }
+//     public void delete(int key) {
+//         int index = hash(key);
+//         LinkedList<Entry> bucket = table[index];
+//         for (Entry entry : bucket) {
+//             if (entry.key == key) {
+//                 bucket.remove(entry);
+//                 System.out.println("Key " + key + " deleted.");
+//                 return;
+//             }
+//         }
+//         System.out.println("Key " + key + " not found.");
+//     }
+//     public void display() {
+//         System.out.println("Hash Table:");
+//         for (int i = 0; i < capacity; i++) {
+//             System.out.print("Bucket " + i + ": ");
+//             for (Entry entry : table[i]) {
+//                 System.out.print("{" + entry.key + ": " + entry.value + "} ");
+//             }
+//             System.out.println();
+//         }
+//     }
+//     public static void main(String[] args) {
+//         HashTable ht = new HashTable(10);
+//         ht.insert(10, 100);
+//         ht.insert(20, 200);
+//         ht.insert(30, 300);
+//         ht.insert(25, 250);
+//         ht.insert(35, 350);
+//         ht.display();
+//         int searchKey = 25;
+//         Integer value = ht.search(searchKey);
+//         if (value != null) {
+//             System.out.println("Value for key " + searchKey + ": " + value);
+//         } else {
+//             System.out.println("Key " + searchKey + " not found.");
+//         }
+//         ht.delete(25);
+//         ht.display();
+//     }
+// }
+
+// class FrequencyChecker{
+//     public static void findElementsWithFrequencyOne(int[] array) {
+//         Arrays.sort(array);
+//         System.out.println(Arrays.toString(array));  
+//         System.out.print("Elements with frequency 1: ");
+//         boolean found = false;
+//         int i = 0;
+//         while (i < array.length) {
+//             int count = 1;
+//             while (i + 1 < array.length && array[i] == array[i + 1]) {
+//                 count++;
+//                 i++;
+//             }
+//             if (count == 1) {
+//                 System.out.print(array[i] + " ");
+//                 found = true;
+//             }
+//             i++;
+//         }
+
+//         if (!found) {
+//             System.out.print("No elements with frequency 1 found.");
+//         }
+//         System.out.println();
+//     }
+
+//     public static void main(String[] args) {
+//         int[] array = {4, 5, 6, 7, 8, 4,4,4,4,6, 8};
+//         findElementsWithFrequencyOne(array);
+//     }
+}
+

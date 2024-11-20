@@ -1578,3 +1578,40 @@ import java.util.*;
 //           levelorder(root);
 //      }
 // }
+
+
+import java.util.Arrays;
+
+class ProductArray {
+    public static int[] productExceptSelf(int[] nums) {
+        int n = nums.length;
+        
+        // Initialize the result array with ones
+        int[] result = new int[n];
+        Arrays.fill(result, 1);
+        
+        // Calculate prefix product for each index and store in result
+        int prefixProduct = 1;
+        for (int i = 0; i < n; i++) {
+            result[i] = prefixProduct;
+            prefixProduct *= nums[i];
+        }
+        
+        // Calculate suffix product for each index and multiply with result
+        int suffixProduct = 1;
+        for (int i = n - 1; i >= 0; i--) {
+            result[i] *= suffixProduct;
+            suffixProduct *= nums[i];
+        }
+        
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+        int[] result = productExceptSelf(array);
+        
+        System.out.println(Arrays.toString(result));
+    }
+}
+

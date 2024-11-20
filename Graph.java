@@ -1231,4 +1231,56 @@
 //     }
 // }
 
-import harry.ppk;
+import java.util.*;
+
+class Graph {
+    private int vertices;
+    private LinkedList<Integer>[] adjacencyList;
+
+    public Graph(int vertices) {
+        this.vertices = vertices;
+        adjacencyList = new LinkedList[vertices];
+        for (int i = 0; i < vertices; i++) {
+            adjacencyList[i] = new LinkedList<>();
+        }
+    }
+
+    public void addEdge(int start, int end) {
+        adjacencyList[start].add(end);
+        adjacencyList[end].add(start);
+    }
+
+    public void displayGraph() {
+        System.out.println("Graph representation (Adjacency List):");
+        for (int i = 0; i < vertices; i++) {
+            System.out.print("Vertex " + i + ": ");
+            for (Integer neighbor : adjacencyList[i]) {
+                System.out.print(neighbor + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of vertices: ");
+        int vertices = scanner.nextInt();
+
+        Graph graph = new Graph(vertices);
+
+        System.out.print("Enter the number of edges: ");
+        int edges = scanner.nextInt();
+
+        System.out.println("Enter the edges (start and end vertices of each edge):");
+        for (int i = 0; i < edges; i++) {
+            int start = scanner.nextInt();
+            int end = scanner.nextInt();
+            graph.addEdge(start, end);
+        }
+
+        graph.displayGraph();
+
+        scanner.close();  // Close the scanner after use
+    }
+}

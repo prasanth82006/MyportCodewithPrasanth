@@ -1,0 +1,18 @@
+.container1 {
+     background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/codingbg.png");
+     background-size: cover;
+     height: 100vh;
+     margin: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.card-main {
+     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+     color: white;
+     padding: 20px 40px;
+     border-radius: 10px;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+     font-family: 'Arial', sans-serif;
+}
