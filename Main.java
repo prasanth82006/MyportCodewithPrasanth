@@ -600,3 +600,154 @@
 //         super(message);
 //     }
 // }
+
+// class Node{
+//      int data;
+//      Node link;
+// }
+// public class Main{
+//      Node start=null,end=null;
+//      public void addFirst(int x){
+//           Node n=new Node();
+//           n.data=x;
+//           if(start==null){
+//                start=end=n;
+//           }
+//           else{
+//                n.link=start;
+//                start=n;
+//           }
+//      }
+//      public void addLast(int x){
+//           Node n=new Node();
+//           n.data=x;
+//           if(start==null){
+//                start=end=n;
+//           }
+//           else{
+//                end.link=n;
+//                end=n;
+//           }
+//      }
+//      // public void addPoistion(int x,int p){
+//      //      int k=1;
+//      //      Node n=new Node();
+//      //      n.data=x;
+//      //      if(p==0){
+//      //           addFirst(x);
+//      //           return;
+//      //      }
+//      //      Node temp=start;
+//      //      while (temp!=null && k<p){
+//      //           temp=temp.link;
+//      //           k++;
+//      //      }
+//      //      if(temp==null){
+//      //           System.out.println("The Element cannot be Inserted..");
+//      //           return;
+//      //      }
+//      //      n.link=temp.link;
+//      //      temp.link=n;
+//      //      if(n.link!=null){
+//      //           end=n;
+//      //      }
+//      // }
+//      // public void delFirst(){
+//      //      if(start==null){
+//      //           System.out.println("The List is Empty");
+//      //      }
+//      //      else{
+//      //           start=start.link;
+//      //      }
+//      // }
+//      // public void delLast(){
+//      //      if(start==null){
+//      //           System.out.println("The List is Empty");
+//      //      }
+//      //      else{
+//      //           Node temp=start;
+//      //           while (temp.link.link!=null){
+//      //                temp=temp.link;
+//      //           }
+//      //           temp.link=null;
+//      //      }
+//      // }
+//      // public void delanypositon(int p){
+//      //      if(p<0){
+//      //           System.out.println("The Position must be Greater than Zero.");
+//      //           return;
+//      //      }
+//      //      if(p==0){
+//      //           delFirst();
+//      //           return;
+//      //      }
+//      //      Node temp=start;
+//      //      Node prev=null;
+//      //      int k=0;
+//      //      while (temp!=null && k<p){
+//      //           prev=temp;
+//      //           temp=temp.link;
+//      //           k++;
+//      //      }
+//      //      prev.link=temp.link;
+//      // }
+//      // public void reverse(){
+//      //      Node current=start;
+//      //      Node prev=null,Next=null;
+//      //      while (current!=null){
+//      //           Next=current.link;
+//      //           current.link=prev;
+//      //           prev=current;
+//      //           current=Next;
+//      //      }
+//      //      start=prev;
+//      // }
+//      // public void Concatenate(Main a){
+//      //      if(start==null){
+//      //           start=a.start;
+//      //           end=a.end;
+//      //      }
+//      //      else{
+//      //           end.link=a.start;
+//      //           end=a.end;
+//      //      }
+//      // }
+//      public void common(Node a, Node b) {
+//           System.out.println("Common elements:");
+//           while (a != null && b != null) {
+//               if (a.data == b.data) {
+//                   System.out.println(a.data);
+//                   a = a.link;
+//                   b = b.link;
+//               } else if (a.data < b.data) {
+//                   a = a.link;
+//               } else {
+//                   b = b.link;
+//               }
+//           }
+//      }
+//      public void display(){
+//           Node n=start;
+//           while (n!=null){
+//                System.out.println(n.data);
+//                n=n.link;
+//           }
+//      }
+//      public static void main(String[] args) {
+//           Main l=new Main();
+//           l.addFirst(1);
+//           l.addFirst(2);
+//           l.addFirst(3);
+//           l.addLast(4);
+//           // l.delanypositon(0);
+//           // l.reverse();
+//           Main l2=new Main();
+//           l2.addFirst(2);
+//           l2.addLast(34);
+//           l2.addLast(45);
+//           // l.Concatenate(l2);
+//           // l.display();
+//           l.common(l.start, l2.start);
+//      }
+// }
+

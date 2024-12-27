@@ -556,14 +556,51 @@ import java.util.*;
 //                temp=temp.link;
 //                k++;
 //           }
-//           prev.link=temp.link;
 //           if(temp==null){
 //                System.out.println("The Position is Not Found");
-//                return;
+//                 return;
 //           }
+//           prev.link=temp.link;
 //           if(temp.link==null){
 //                end=prev;
 //           }
+//      }
+//      public void rea(){
+//           Node Os=null;
+//           Node Oe=null;
+//           Node Es=null,Ee=null;
+//           Node current=start;
+//           while (current!=null){
+//                if(current.data%2!=0){
+//                     if(Os==null){
+//                          Os=Oe=current;
+//                     }
+//                     else{
+//                          Oe.link=current;
+//                          Oe=current;
+//                     }
+//                }
+//                else{
+//                     if(Es==null){
+//                          Es=Ee=current;
+//                     }
+//                     else{
+//                          Ee.link=current;
+//                          Ee=current;
+//                     }
+//                }
+//                current=current.link;
+//           }
+//           if(Os==null){
+//                start=Es;
+//           }
+//           else{
+//                Oe.link=Es;
+//                start=Os;
+//           }
+//           if (Ee != null) {
+//                Ee.link = null;
+//            }
 //      }
 //      public void display(){
 //           Node n=start;
@@ -577,11 +614,12 @@ import java.util.*;
 //           l.addFirst(1);
 //           l.addFirst(2);
 //           l.addLast(3);
-//           l.addPosition(6, 1);
-//           // l.reverse();
-//           // l.delFirst();
-//           // l.delEnd();
-//           l.delposition(3);
+          // l.addPosition(6, 1);
+          // l.reverse();
+          // l.delFirst();
+          // l.delEnd();
+          // l.delposition(3);
+//           l.rea();
 //           l.display();
 //      }
 // }
@@ -739,92 +777,93 @@ import java.util.*;
 //      }
 //  }
  
-// class Node{
-//      Node Rlink,Llink;
-//      int data;
-// }
-// class Dlist{
-//      Node start,end;
-//      Dlist(){
-//           start=end=null;
-//      }
-//      public void addFirst(int x){
-//           Node n=new Node();
-//           n.data=x;
-//           if(start==null){
-//                start=end=n;
-//           }
-//           else{
-//                n.Rlink=start;
-//                start.Llink=n;
-//                start=n;
-//           }
-//      }
-//      public void addLast(int x){
-//           Node n=new Node();
-//           n.data=x;
-//           if(start==null){
-//                start=end=n;
-//           }
-//           else{
-//                end.Rlink=n;
-//                n.Llink=end;
-//                end=n;
-//           }
-//      }
-//      public void delFirst(){
-//           if(start==null){
-//                System.out.println("The Dlist is Empty");
-//                return;
-//           }
-//           else{
-//                start=start.Rlink;
-//           }
-//      }
-//      public void delEnd(){
-//           if(start==null){
-//                System.out.println("The Dlist is Empty");
-//                return;
-//           }
-//           else{
-//                end=end.Llink;
-//                end.Rlink=null;
-//           }
-//      }
-//      void displayf(){
-//           if(start==null){
-//                System.out.println("The Dlist is Empty");
-//                return;
-//           }
-//           else{
-//                Node n=start;
-//                while (n!=null){
-//                     System.out.println(n.data);
-//                     n=n.Rlink;
-//                }
-//           }
-//      }
-//      void displayb(){
-//           if(start==null){
-//                System.out.println("The Dlist is Empty");
-//                return;
-//           }
-//           else{
-//                Node n=end;
-//                while (n!=null){
-//                     System.out.println(n.data);
-//                     n=n.Llink;
-//                }
-//           }
-//      }
-//      public static void main(String[] args) {
-//           Dlist d=new Dlist();
-//           d.addFirst(1);    
-//           d.addFirst(2);    
-//           d.addFirst(3);
-//           d.addLast(5);
-//           d.delFirst();
-//           d.displayf();    
-//      }
-// }
+class Node{
+     Node Rlink,Llink;
+     int data;
+}
+class Chethan{
+     Node start,end;
+     Chethan(){
+          start=end=null;
+     }
+     public void addFirst(int x){
+          Node n=new Node();
+          n.data=x;
+          if(start==null){
+               start=end=n;
+          }
+          else{
+               n.Rlink=start;
+               start.Llink=n;
+               start=n;
+          }
+     }
+     public void addLast(int x){
+          Node n=new Node();
+          n.data=x;
+          if(start==null){
+               start=end=n;
+          }
+          else{
+               end.Rlink=n;
+               n.Llink=end;
+               end=n;
+          }
+     }
+     public void delFirst(){
+          if(start==null){
+               System.out.println("The Dlist is Empty");
+               return;
+          }
+          else{
+               start=start.Rlink;
+          }
+     }
+     public void delEnd(){
+          if(start==null){
+               System.out.println("The Dlist is Empty");
+               return;
+          }
+          else{
+               end=end.Llink;
+               end.Rlink=null;
+          }
+     }
+     void displayf(){
+          if(start==null){
+               System.out.println("The Dlist is Empty");
+               return;
+          }
+          else{
+               Node n=start;
+               while (n!=null){
+                    System.out.println(n.data);
+                    n=n.Rlink;
+               }
+          }
+     }
+     void displayb(){
+          if(start==null){
+               System.out.println("The Dlist is Empty");
+               return;
+          }
+          else{
+               Node n=end;
+               while (n!=null){
+                    System.out.println(n.data);
+                    n=n.Llink;
+               }
+          }
+     }
+     public static void main(String[] args) {
+          Chethan d=new Chethan();
+          d.addFirst(1);    
+          d.addFirst(2);    
+          d.addFirst(3);
+          d.addLast(5);
+          d.delFirst();
+          d.displayf();    
+     }
+}
+
 

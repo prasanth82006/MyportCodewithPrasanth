@@ -635,9 +635,9 @@ import harry.f1.f2.rectangle;
 //           return prefix;
 //      }
 //      public static void main(String[] args) {
-//           String str = "2+3-5/6+6-2*3";
-//           System.out.println("The prefix Expression is: ");
-//           System.out.println(itf(str));
+          // String str = "2+3-5/6+6-2*3";
+          // System.out.println("The prefix Expression is: ");
+          // System.out.println(itf(str));
 //      }
 // }
 
@@ -825,35 +825,43 @@ import harry.f1.f2.rectangle;
 //                }
 //           }
 //      }
-//      public Node delete(Node root,int data){
-//           if(root==null){
-//                return null;
-//           }
-//           if(root.data==data){
-//                if(root.left==null && root.right==null){
-//                     return null;
-//                }
-//                if(root.left==null){
-//                     return root.right;
-//                }
-//                if(root.right==null){
-//                     return root.left;
-//                }
-//                Node min=inorderSuccessor(root.right);
-//                root.right=delete(root.right, min.data);
-//           }
-//           else{
-//                root.right=delete(root.right, data);
-//                root.left=delete(root.left, data);
+//      public Node inorderSuccessor(Node root){
+//           if(root.right!=null){
+//               root=root.right;
 //           }
 //           return root;
-//      }
-//      public Node inorderSuccessor(Node n){
-//           while (n.right!=null){
-//               n=n.right;
+//       }
+//       public Node delete(Node root, int data){
+//           if (root == null) {
+//               return null;
 //           }
-//           return n;
-//      }
+//           if (data < root.data) {
+//               root.left = delete(root.left, data);
+//           } else if (data > root.data) {
+//               root.right = delete(root.right, data);
+//           } else {
+//               if (root.left == null) {
+//                   return root.right;
+//               } else if (root.right == null) {
+//                   return root.left;
+//               }
+//               Node min = inorderSuccessor(root.right);
+//               root.right = delete(root.right, min.data);
+//           }
+//           return root;
+//       }
+//       public Node search(Node root,int data){
+//           if(root.data==data){
+//                return root;
+//           }
+//           else if(root.data<data){
+//                return search(root.right, data);
+//           }
+//           else if(root.data>data){
+//                return search(root.left, data);
+//           }
+//           return null;
+//       }
 //      public void display(Node root){
 //           if(root!=null){
 //                System.out.println(root.data);
@@ -870,6 +878,12 @@ import harry.f1.f2.rectangle;
 //           b.insert(root, 1);
 //           b.delete(root, 2);
 //           b.display(root);
+//           if(b.search(root, 12)!=null){
+//                System.out.println("Found");
+//           }
+//           else{
+//                System.out.println("Not Found");
+//           }
 //      }
 // }
 
@@ -951,3 +965,281 @@ import harry.f1.f2.rectangle;
 //           tree.display(root);
 //      }
 // }
+
+// class sort{
+//      static void swap(int arr[],int i,int j){
+//           int temp=arr[i];
+//           arr[i]=arr[j];
+//           arr[j]=temp;
+//      }
+//      static int partition(int arr[],int low,int high){
+//           int pr=arr[high];
+//           int i=low-1;
+//           for(int j=low;j<=high-1;j++){
+//                if(arr[j]<pr){
+//                     i++;
+//                     swap(arr, i, j);
+//                }
+//           }
+//           swap(arr, i+1, high);
+//           return i+1;
+//      }
+//      public static void Quick(int arr[],int low,int high){
+//           if(low<high){
+//                int p=partition(arr, low, high);
+//                Quick(arr, low, p-1);
+//                Quick(arr, p+1, high);
+//           }
+//      }
+//      public static void main(String[] args) {
+     //      int arr[]={7,8,3,1,2};
+     //      int n=arr.length;
+     //      Quick(arr,0,n-1);
+     //      System.out.println(Arrays.toString(arr));
+     // }
+// }
+
+// class sort{
+//      static void swap(int arr[],int i,int j){
+//           int temp=arr[i];
+//           arr[i]=arr[j];
+//           arr[j]=temp;
+//      }
+//      static int partition(int arr[],int low,int high){
+//           int pr=arr[high];
+//           int i=low-1;
+//           for(int j=low;j<=high-1;j++){
+//                if(arr[j]<pr){
+//                     i++;
+//                     swap(arr, i, j);
+//                }  
+//           }
+//           swap(arr, i+1, high);
+//           return i+1;
+//      }
+//      static void Quick(int arr[],int low,int high){
+//           if(low<high){
+//                int p=partition(arr, low, high);
+//                Quick(arr, low, p-1);
+//                Quick(arr, p+1, high);
+//           }
+//      }
+//      public static void main(String[] args) {
+//           int arr[]={7,8,3,1,2};
+//           int n=arr.length;
+//           Quick(arr,0,n-1);
+//           System.out.println(Arrays.toString(arr));
+//      }
+// }
+
+// class Node{
+//      int data;
+//      Node link;
+// }
+// class List{
+//      Node start,end;
+//      List(){
+//           start=end=null;
+//      }
+//      public void addFirst(int x){
+//           Node n=new Node();
+//           n.data=x;
+//           if(start==null){
+//                start=end=n;
+//           }
+//           else{
+//                n.link=start;
+//                start=n;
+//                end.link=start;
+//           }
+//      }
+//      public void addLast(int x){
+//           Node n=new Node();
+//           n.data=x;
+//           if(start==null){
+//                start=end=n;
+//           }
+//           else{
+//                end.link=n;
+//                end=n;
+//                end.link=start;
+//           }
+//      }
+     // public void addpostion(int x,int p){
+     //      if(p<0){
+     //           System.out.println("The");
+     //      }
+     // }
+     // public void delFirst(){
+     //      if(start==null){
+     //           System.out.println("The List is Empty");
+     //      }
+     //      else{
+     //           start=start.link;
+     //           end.link=start;
+     //      }
+     // }
+     // public void delEnd(){
+     //      if(start==null){
+     //           System.out.println("The List is Empty");
+     //      }
+     //      else{
+     //           Node temp=start;
+     //           while (temp.link.link!=null){
+     //                temp=temp.link;
+     //           }
+     //           temp.link=null;
+     //      }
+     // }
+//      public void display(){
+//           // Node n=end;
+//           // while (n!=null){
+//           //      System.out.println(n.data);
+//           //      n=n.link;
+//           // }
+//           Node n=start;
+//           do{
+//                System.out.println(n.data);
+//                n=n.link;
+//           }while(n!=start);
+//      }
+//      public static void main(String[] args) {
+//           List l=new List();
+//           l.addFirst(1);
+//           l.addFirst(2);
+//           l.addFirst(23);
+//           l.addLast(5);
+//           l.delFirst();
+//           // l.delEnd();
+//           l.display();
+//      }
+// }
+
+// class Node{
+//      int data;
+//      Node Rlink;
+//      Node Llink;
+// }
+
+// class Dlist{
+//      Node start,end;
+//      Dlist(){
+//           start=end=null;
+//      }
+//      public void addFirst(int x){
+//           Node n=new Node();
+//           n.data=x;
+//           if(start==null){
+//                start=end=n;
+//                return;
+//           }
+//           n.Rlink=start;
+//           start.Llink=n;
+//           start=n;
+//      }
+//      public void addEnd(int x){
+//           Node n=new Node();
+//           n.data=x;
+//           if(start==null){
+//                start=end=n;
+//                return;
+//           }
+//           end.Rlink=n;
+//           n.Llink=end;
+//           end=n;
+//      }
+//      public void delFirst(){
+//           if(start==null){
+//                System.out.println("The Dlist is Empty");
+//                return;
+//           }
+//           else if(start==end){
+//                start=end=null;
+//           }
+//           else{
+//                start=start.Rlink;
+//                start.Llink=start;
+//           }
+//      }
+//      public void displayf(){
+//           Node n=start;
+//           while (n!=null){
+//                System.out.println(n.data);
+//                n=n.Rlink;
+//           }
+//      }
+//      public void displayb() {
+//           Node n = end;
+//           System.out.println("Backward traversal:");
+//           while (n != null) {
+//               System.out.print(n.data + " ");
+//               n = n.Llink;
+//           }
+//           System.out.println();
+//       }
+//      public static void main(String[] args) {
+//           Dlist d=new Dlist();
+//           d.addEnd(1);
+//           d.addEnd(2);
+//           d.addEnd(3);
+//           d.addEnd(5);
+//           d.addEnd(4);
+//           //d.displayf();
+//           d.displayb();
+//      }
+// }
+
+// class practice {
+//      public static int precedence(char ch){
+//           if(ch=='+' || ch=='-'){
+//                return 1;
+//           }
+//           else if(ch=='*'||ch=='/'){
+//                return 2;
+//           }
+//           else if(ch=='^'){
+//                return 3;
+//           }
+//           else{
+//                return -1;
+//           }
+//      }
+//      public static String itp(String Expression){
+//           int n=Expression.length();
+//           String prefix="";
+//           Stack<String> stack =new Stack<>();
+//           for(int i=n-1;i>=0;i--){
+//                char ch=Expression.charAt(i);
+//                if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z')||(ch>='0' && ch<='9')){
+//                     prefix = ch + prefix;
+//                }
+//                else if(ch==')'){
+//                     stack.push(ch+"");
+//                }
+//                else if(ch=='('){
+//                     if(!stack.isEmpty() && !stack.peek().equals(')')){
+//                          prefix = stack.pop() + prefix;
+//                     }
+//                     else if(!stack.isEmpty()){
+//                          stack.pop();
+//                     }
+//                }
+//                else{
+//                     if(!stack.isEmpty() && precedence(ch)<=precedence(stack.peek().charAt(0))){
+//                          prefix = stack.pop() + prefix;
+//                     }
+//                     stack.push(ch+"");
+//                }
+//           }
+//           while (!stack.isEmpty()){
+//                prefix = stack.pop() + prefix;
+//           }
+//           return prefix;
+//      }
+//      public static void main(String[] args) {
+//           String str = "2+3-5/6+6-2*3";
+//           System.out.println("The prefix Expression is: ");
+//           System.out.println(itp(str));
+//      }
+// }
+
