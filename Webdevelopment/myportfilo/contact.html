@@ -1,14 +1,13 @@
 <head><link rel="stylesheet" href="style.css"></head>
 <section id="contact" >
-     <h1>Contact Me</h1>
-     <p>feel free to contact me</p>
+     <h1 style="padding: 10px; margin: 1px; color: brown;">Contact Me</h1>
+     <p style="padding: 10px;">feel free to contact me</p>
      <form action="https://formspree.io/f/xovavlkz" method="POST">
           <input type="hidden" name="access_key" value="4cee2c6f-8c82-4bf5-9e18-716e29e8f09d">
          <div>
              <label for="Name" style="color: black;"> Name:</label>
              <input  type="text" id="Name" placeholder="enter name"required>
          </div>
- 
          <div>
              <label for="email" style="color: black;">Email:</label>
              <input type="email" name="emai" placeholder="enter emai adress" required>
@@ -29,7 +28,7 @@
          </div>
          <div>
              <label for="Bio" style="color: black;">Suggestion (up to 200 characters):</label>
-             <input type="text" class="te" maxlength="200">
+             <textarea id="te" maxlength="200" placeholder="Enter your suggestion here"></textarea><br><br>
          </div>
          <a href=""><button class="submit">Submit</button></a>
      </form>
