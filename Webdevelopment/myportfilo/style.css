@@ -1,6 +1,6 @@
 body {
      margin: 0;
-     font-family: 'Roboto', sans-serif;
+     font-family: italic;
      font-size: 15px;
      background-color: #f0f8ff;
  }
@@ -85,7 +85,7 @@ body {
      background-color: white;
      color: black;
      margin: 5px;
-     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
  }
  
  .navbar .button:hover {
@@ -123,6 +123,8 @@ body {
      padding: 50px 20px;
      text-align: center;
      background-color: #f8f9fa;
+     display: flex;
+     flex-wrap: wrap;
  }
  
  #certificateSection h2 {
@@ -160,6 +162,8 @@ body {
      border-radius: 5px;
      margin-bottom: 15px;
      cursor: pointer;
+     display: flex;
+     flex-wrap: wrap;
  }
  
  .certificate-card p {
@@ -237,8 +241,8 @@ body {
  }
  
  img {
-     width: 200px;
-     height: 200px;
+     width: 150px;
+     height: 150px;
  }
  
  section {

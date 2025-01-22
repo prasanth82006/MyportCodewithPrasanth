@@ -14,6 +14,10 @@ const certificates = [
      {
           title:"javascript Course",
           image:"udemy.jpg"
+     },
+     {
+          title:"Scaler",
+          image:"Scaler.jpg"
      }
  ];
  
