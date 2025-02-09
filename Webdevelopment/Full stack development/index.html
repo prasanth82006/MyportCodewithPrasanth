@@ -3,65 +3,67 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
-     <meta name="description" content="Personal Profile Page of Prasanth">
+     <title>Personal Profile - Prasanth</title>
+     <meta name="description" content="Personal Profile Page of P. Prasanth Kumar">
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
      <header>
-          <h1>Welcome to My World !</h1>
-          <p>This is Prasanth,a Tech Ethusiast.</p>
+          <h1>Welcome to My World!</h1>
+          <p>This is Prasanth, a Tech Enthusiast.</p>
      </header>
 
      <section>
           <h2>About Me</h2>
-          <p>Hello! I'm Prasanth,and here's a little Info about Me.</p>
-          <img src="./img/photo.jpg" alt="Prasanth Pic" width="300">
+          <p>Hello! I'm Prasanth, and here's a little info about me.</p>
+          <img src="./img/photo.jpg" alt="A photo of Prasanth" width="300">
      </section>
 
      <section>
           <h2>Contact Information</h2>
-          <p>Let's Connect!</p>
-          <p><a href="https://www.linkedin.com/in/palla-prasanth-kumar-4071452a6/">Follow me on Linkedin </a> | <a href="mailto:prasanthkumarnlr@gmail.com">Send me an email</a></p>
+          <p>Let's connect!</p>
+          <p>
+               <a href="https://www.linkedin.com/in/palla-prasanth-kumar-4071452a6/" target="_blank">Follow me on LinkedIn</a> | 
+               <a href="mailto:prasanthkumarnlr@gmail.com">Send me an email</a>
+          </p>
      </section>
 
      <section>
           <h2>Portfolio</h2>
-          <p>Take a look at some of my works.</p>
-          <p><a href="">Project-1</a> | <a href="">Project-2</a> | <a href="">Project-3</a></p>
+          <p>Take a look at some of my work:</p>
+          <p>
+               <a href="#" target="_blank">Project 1</a> | 
+               <a href="#" target="_blank">Project 2</a> | 
+               <a href="#" target="_blank">Project 3</a>
+          </p>
      </section>
-
      <section>
           <h2>My Skills</h2>
-          <table align="center">
-               <tr>
-                    <td>
-                         <ul style="text-align: left;">
-                              <li>Web Development</li>
-                              <li>Machine Learning</li>
-                         </ul>
-                    </td>
-               </tr>
-          </table>
+          <ul>
+               <li>Web Development</li>
+               <li>Machine Learning</li>
+          </ul>
      </section>
-     
+
      <section>
           <h2>Contact Me</h2>
-          <form action="">
-               <label for="name">Name:</label>
-               <input type="text" id="name" name="name"><br><br>
+          <form action="#" method="post">
+               <label for="name">Name:</label><br>
+               <input type="text" id="name" name="name" required><br><br>
 
-               <label for="email">Email:</label>
-               <input type="email" name="email" id="email"><br><br>
+               <label for="email">Email:</label><br>
+               <input type="email" id="email" name="email" required><br><br>
 
-               <label for="message">Message:</label><br><br>
-               <textarea name="message" id="message"></textarea>
+               <label for="message">Message:</label><br>
+               <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
 
                <button type="submit">Send Message</button>
           </form>
      </section>
+
      <footer>
-          <h2></h2>
+          <p>&copy; 2024 P. Prasanth Kumar. All Rights Reserved.</p>
      </footer>
+     
 </body>
 </html>
