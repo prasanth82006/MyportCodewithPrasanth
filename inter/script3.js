@@ -15,11 +15,11 @@ for(let i=0;i<btn.length;i++){
      })
 }
 function clearResult(){
-
+     display.value="";
 }
 function calculateResult(){
-
+     display.value=eval(display.value);
 }
 function appendValue(value){
-     display
+     display.value+=value;
 }
