@@ -102,15 +102,6 @@
 # print(m)
 
 
-# import pandas as pd
-# df=pd.read_csv('data.csv')
-# print(df)
-
-import seaborn as sn
-import numpy as np
-data=np.random.randn(100)
-sn.histplot(data=data,bins=10)
-
 
 
 

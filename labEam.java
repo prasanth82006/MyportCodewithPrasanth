@@ -288,16 +288,16 @@ import java.util.*;
 //           }
 //      }
 //      public void reverse(){
-//           Node current=start;
-//           Node next=null;
-//           Node prev=null;
-//           while (current!=null){
-//                next=current.link;
-//                current.link=prev;
-//                prev=current;
-//                current=next;
-//           }
-//           start=prev;
+          // Node current=start;
+          // Node next=null;
+          // Node prev=null;
+          // while (current!=null){
+          //      next=current.link;
+          //      current.link=prev;
+          //      prev=current;
+          //      current=next;
+          // }
+          // start=prev;
 //      }
 //      public static void main(String[] args) {
 //           List l=new List();
