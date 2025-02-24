@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>MY INTRODUCTION SITE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Introduction Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-          <div class="marquee-container">
-               <div class="marquee-text" style="font-family: monospace;">&nbspWelcome<br>&nbsp&nbspto My <br> Portfolio!</div>
-           </div>
-          <br>
-        <br>
-        <main>
-          <div class="navbar">
-               <a href="about.html"><button class="button">About</button></a>
-               <a href="skills.html"><button class="button">Skills</button></a>
-               <a href="Myprojects.html"><button class="button">Projects</button></a>
-               <a href="contact.html"><button class="button">Contact</button></a>
-               <a href="read.html"><button class="button">Certificates</button></a>
-           </div>
-        </main>
+        <div class="marquee-container">
+            <div class="marquee-text" style="font-family: monospace;">
+                &nbsp;Welcome<br>&nbsp;&nbsp;to My <br>Portfolio!
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="nav-links">
+                <a href="about.html"><button class="button">About</button></a>
+                <a href="skills.html"><button class="button">Skills</button></a>
+                <a href="myprojects.html"><button class="button">Projects</button></a>
+                <a href="contact.html"><button class="button">Contact</button></a>
+                <a href="read.html"><button class="button">Certificates</button></a>
+            </div>
+        </nav>
     </header>
+
     <footer>
         <div class="last">
-          <a href="https://www.linkedin.com/in/palla-prasanth-kumar-4071452a6/"><img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG6.png" class="link" style="color: white;" alt="linked"></a>
-          <a href="https://github.com/prasanth82006" ><img class="git" src="https://cdn-1.webcatalog.io/catalog/github/github-icon.png" style="color: white;" alt="github"></a>
-          </div>
-          <div class="nam">
-               <p style="color: white;">© 2024 P.Prasanth Kumar. All Rights Reserved.</p>
-           </div>
-           <div class="links">
-               <a href="">Privacy Policy</a>
-               <span>|</span>
-               <a href="">Terms of Service</a>
-               <span>|</span>
-               <a href="">Contact Us</a>
-           </div>
+            <a href="https://www.linkedin.com/in/palla-prasanth-kumar-4071452a6/" target="_blank">
+                <img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG6.png" class="link" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/prasanth82006" target="_blank">
+                <img class="git" src="https://cdn-1.webcatalog.io/catalog/github/github-icon.png" alt="GitHub">
+            </a>
+        </div>
+
+        <div class="nam">
+            <p>© 2024 P. Prasanth Kumar. All Rights Reserved.</p>
+        </div>
+
+        <div class="links">
+            <a href="#">Privacy Policy</a>
+            <span>|</span>
+            <a href="#">Terms of Service</a>
+            <span>|</span>
+            <a href="#">Contact Us</a>
+        </div>
     </footer>
- 
+
+    <script src="script.js"></script>
 </body>
 </html>
