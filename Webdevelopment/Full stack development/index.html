@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prasanthkumar</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <header>
@@ -14,12 +15,15 @@
         <nav class="navbar">
             <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle menu">☰</div>
             <div class="nav-links" id="navLinks">
-                <a href=""><button class="button" id="H">Home</button></a>
-                <a href="#about-skills"><button class="button">About</button></a>
-                <a href="#Projects"><button class="button">Projects</button></a>
-                <a href="#contact"><button class="button">Contact</button></a>
-                <a href=""><button class="button">Certificates</button></a>
-                <a href="https://drive.google.com/file/d/1zkjOBk3EAwux9J-Bn6y6Y9gNZ-pTbL6a/view?usp=sharing" target="_blank"><button class="button">CV</button></a>
+                <a href="" class="button" id="H">Home</a>
+                <a href="#about-skills" class="button">About</a>
+                <a href="#Projects" class="button">Projects</a>
+                <a href="#contact" class="button">Contact</a>
+                <a href="#readmore" class="button">Certificates</a>
+                <a href="https://drive.google.com/file/d/1zkjOBk3EAwux9J-Bn6y6Y9gNZ-pTbL6a/view?usp=sharing" target="_blank" class="button">CV</a>
+            </div>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
             </div>
         </nav>
     </header>
@@ -32,7 +36,7 @@
             <div class="headbody">
                 <h1>Hi, I'm Prasanth Kumar</h1>
                 <p>I'm a Front-End Developer</p>
-                <span>B-Tech | 3rd Year | VIT-AP University</span>
+                <span>B-Tech | VIT-AP University</span>
             </div>
         </div>
     </section>
@@ -91,7 +95,11 @@
             </div>
         </div>
     </section>
-
+    <section id="readmore">
+        <h2>MY Certificates</h2>
+        <div class="certificate-container">
+        </div>
+    </section>
     <section id="contact">
         <h1>Contact Me</h1>
         <p>Feel free to contact me</p>
@@ -149,12 +157,6 @@
             <a href="#">Contact Us</a>
         </div>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById("navLinks");
-            navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
