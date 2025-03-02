@@ -85,7 +85,12 @@ function toggleMenu() {
      });
  }
  
- function toggleTheme() {
+ function toggleMenu() {
+     const navLinks = document.getElementById('navLinks');
+     navLinks.classList.toggle('show');
+ }
+ 
+ function Background() {
      const body = document.body;
      const themeIcon = document.getElementById('theme-icon');
  
@@ -100,6 +105,7 @@ function toggleMenu() {
      }
  }
  
+ // Apply theme on page load
  document.addEventListener("DOMContentLoaded", () => {
      if (localStorage.getItem('theme') === 'dark') {
          document.body.classList.add('dark-theme');

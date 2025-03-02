@@ -1,5 +1,3 @@
-import java.util.*;
-// class Solution {
 //     public static void main(String[] args) {
 //         Scanner sc = new Scanner(System.in);
 
@@ -250,3 +248,10 @@ import java.util.*;
 //         System.out.print(profit);
 //     }
 // }
+
+
+public class leet {
+     public static void main(String[] args) {
+          System.out.println("Print");
+     }
+}
