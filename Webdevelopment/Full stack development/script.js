@@ -84,10 +84,10 @@ function toggleMenu() {
          }
      });
  }
- 
+
  function toggleMenu() {
      const navLinks = document.getElementById('navLinks');
-     navLinks.classList.toggle('show');
+     navLinks.classList.toggle('show'); // Toggle the 'show' class
  }
  
  function Background() {
@@ -105,7 +105,6 @@ function toggleMenu() {
      }
  }
  
- // Apply theme on page load
  document.addEventListener("DOMContentLoaded", () => {
      if (localStorage.getItem('theme') === 'dark') {
          document.body.classList.add('dark-theme');

@@ -2,13 +2,13 @@
 :root {
      --text-color: black;
      --background-color: white;
-     --border-color: #ddd; /* Default border color for light theme */
+     --border-color: #ddd;
  }
  
  .dark-theme {
      --text-color: white;
      --background-color: #121212;
-     --border-color: #444; /* Darker border color for dark theme */
+     --border-color: #444;
  }
  
  body {
@@ -19,19 +19,9 @@
      padding: 0;
  }
  
- /* Apply text color and border to headings and paragraphs */
  h1, h2, h3, p {
      color: var(--text-color);
-     border-bottom: 2px solid var(--border-color); /* Add a border to headings and paragraphs */
-     padding-bottom: 10px; /* Add some spacing below the border */
- }
- 
- /* Ensure borders are visible in dark theme */
- .dark-theme h1,
- .dark-theme h2,
- .dark-theme h3,
- .dark-theme p {
-     border-bottom: 2px solid var(--border-color);
+     padding-bottom: 10px;
  }
  
  /* Header */
@@ -73,14 +63,28 @@
  }
  
  .nav-links {
-     display: flex;
-     gap: 15px;
+     display: none; /* Hide by default */
+     flex-direction: column;
+     position: absolute;
+     top: 75px;
+     right: 20px;
+     background-color: var(--background-color);
+     border-radius: 5px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     padding: 10px;
+ }
+ 
+ .nav-links.show {
+     display: flex; /* Show when the 'show' class is applied */
  }
  
  .nav-links a {
      text-decoration: none;
      color: var(--text-color);
      font-weight: 500;
+     text-align: center;
+     padding: 10px;
+     display: block;
  }
  
  /* Navbar Buttons */
@@ -110,40 +114,31 @@
      }
  
      .nav-links {
-         display: none;
-         flex-direction: column;
-         position: absolute;
-         top: 75px;
-         right: 20px;
-         background-color: var(--background-color);
-         border-radius: 5px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         padding: 10px;
+         display: none; /* Hide by default on mobile */
      }
  
-     .nav-links a {
-         text-align: center;
-         padding: 10px;
-         display: block;
-     }
- 
-     .nav-links.active {
-         display: flex;
+     .nav-links.show {
+         display: flex; /* Show when the 'show' class is applied */
      }
  }
  
- /* Theme Toggle Icon */
- .theme-toggle {
+ @media (min-width: 769px) {
+     .nav-links {
+         display: flex; /* Show by default on larger screens */
+         flex-direction: row;
+         position: static;
+         background-color: transparent;
+         box-shadow: none;
+     }
+ 
+     .menu-icon {
+         display: none; /* Hide the hamburger menu on larger screens */
+     }
+ }
+ #theme-icon{
      cursor: pointer;
-     margin-left: auto; /* Align to the right */
-     padding: 10px;
+     padding-top: 5px;
  }
- 
- .theme-toggle .material-symbols-outlined {
-     font-size: 24px;
-     vertical-align: middle;
- }
- 
  /* Container */
  .container {
      display: flex;
@@ -187,6 +182,7 @@
      width: 330px;
      height: 350px;
      border-radius: 50%;
+     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
  }
  
  @keyframes moveToTop {
@@ -283,6 +279,16 @@
      color: var(--text-color);
      margin-bottom: 20px;
      text-align: center;
+ }
+ 
+ #Projects h2::after {
+     content: '';
+     display: block;
+     width: 50px;
+     height: 3px;
+     background-color: green;
+     border-radius: 10px;
+     margin: 10px auto 0;
  }
  
  .skills-grid {
@@ -408,26 +414,41 @@
      display: flex;
      justify-content: center;
      align-items: center;
+     flex-direction: column;
+ }
+ 
+ #readmore h2::after {
+     content: '';
+     display: block;
+     width: 50px;
+     height: 3px;
+     background-color: green;
+     border-radius: 10px;
+     margin: 10px auto 0; /* Centers the line horizontally */
  }
  
  .certificate-container {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-     gap: 20px;
-     justify-content: center;
+     display: flex;
+     flex-wrap: wrap; /* Allow items to wrap to the next line */
+     justify-content: center; /* Center items horizontally */
+     gap: 20px; /* Space between items */
      padding: 20px;
      max-width: 1200px;
      margin: 0 auto;
  }
- 
+ .dark-theme .certificate-card {
+     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3); /* Even more pronounced shadow */
+ }
  .certificate-card {
      background-color: var(--background-color);
      border: 1px solid var(--border-color);
      border-radius: 10px;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     box-shadow: 0 4px 8px white;
      transition: transform 0.3s, box-shadow 0.3s;
      text-align: center;
      padding: 15px;
+     flex: 1 1 calc(25% - 40px); /* 4 cards per row (25% width minus gap) */
+     max-width: calc(25% - 40px); /* 4 cards per row (25% width minus gap) */
  }
  
  .certificate-card:hover {
@@ -448,6 +469,52 @@
      font-weight: bold;
      color: var(--text-color);
      margin-top: 10px;
+ }
+ 
+ /* Responsive Design for #readmore Section */
+ @media (max-width: 1200px) {
+     .certificate-card {
+         flex: 1 1 calc(33.33% - 40px); /* 3 cards per row on smaller laptops */
+         max-width: calc(33.33% - 40px); /* 3 cards per row on smaller laptops */
+     }
+ }
+ 
+ @media (max-width: 768px) {
+     #readmore h2 {
+         font-size: 1.8rem; /* Reduce font size for smaller screens */
+     }
+ 
+     .certificate-card {
+         flex: 1 1 calc(50% - 40px); /* 2 cards per row on tablets */
+         max-width: calc(50% - 40px); /* 2 cards per row on tablets */
+     }
+ 
+     .certificate-img {
+         height: 150px; /* Reduce image height for smaller screens */
+     }
+ 
+     .certificate-card p {
+         font-size: 1rem; /* Reduce font size for smaller screens */
+     }
+ }
+ 
+ @media (max-width: 480px) {
+     #readmore h2 {
+         font-size: 1.5rem; /* Further reduce font size for very small screens */
+     }
+ 
+     .certificate-card {
+         flex: 1 1 calc(100% - 40px); /* 1 card per row on mobile */
+         max-width: calc(100% - 40px); /* 1 card per row on mobile */
+     }
+ 
+     .certificate-img {
+         height: 120px; /* Further reduce image height for very small screens */
+     }
+ 
+     .certificate-card p {
+         font-size: 0.9rem; /* Further reduce font size for very small screens */
+     }
  }
  
  /* Modal Styles */
@@ -520,6 +587,16 @@
      margin-bottom: 10px;
  }
  
+ #contact h1::after {
+     content: '';
+     display: block;
+     width: 50px;
+     height: 3px;
+     background-color: green;
+     border-radius: 10px;
+     margin: 10px auto 0;
+ }
+ 
  #contact p {
      font-size: 1.2rem;
      color: var(--text-color);
@@ -536,6 +613,10 @@
      width: 100%;
      max-width: 400px;
      margin: 0 auto;
+ }
+ 
+ .dark-theme form {
+     border: 1px solid white; /* White border in dark mode */
  }
  
  form div {
