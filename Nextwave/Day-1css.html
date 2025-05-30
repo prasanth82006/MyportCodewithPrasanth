@@ -1,0 +1,437 @@
+
+<!-- Task-1 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Day-1 css</title>
+      <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: left;
+    }
+
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .marquee {
+      display: flex;
+      animation: scroll-right 20s linear infinite;
+    }
+
+    .marquee img {
+      height: 200px;
+      margin-right: 20px;
+    }
+
+    @keyframes scroll-right {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+     <h2>Image in Marquee</h2>
+     <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deleniti doloremque itaque esse laborum modi illo accusantium iure, tenetur qui molestiae optio non hic. Illum reiciendis ad magni eveniet similique!
+     </p>
+     <div class="marquee-container">
+          <div class="marquee">
+               <img src="./image.jpg" alt="Books Image">
+               <img src="./image.jpg" alt="Books Image">
+               <img src="./image.jpg" alt="Books Image">
+               <img src="./image.jpg" alt="Books Image">
+          </div>
+     </div>
+</body>
+
+</html> -->
+
+<!-- Task-2 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Doctor Appointment Form</title>
+     <style>
+          body {
+               font-family: Arial, sans-serif;
+               margin: 0;
+               padding: 20px;
+               background-color: #f5f5f5;
+          }
+
+          .container {
+               display: flex;
+               justify-content: center;
+               align-items: flex-start;
+               gap: 40px;
+               background-color: #fff;
+               padding: 20px;
+               border-radius: 8px;
+               max-width: 100%;
+               margin: auto;
+               box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+               height: 690px;
+          }
+
+          .image-container img {
+               width: 350px;
+               height: auto;
+               border-radius: 8px;
+               padding-top: 100px;
+          }
+
+          .form-container {
+               flex: 1;
+               width: 800px;
+          }
+
+          h1 {
+               color: #333;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+          }
+
+          hr {
+               border: none;
+               border-top: 2px solid maroon;
+               margin: 10px 0 20px;
+          }
+
+          form {
+               display: flex;
+               flex-direction: column;
+          }
+
+          .form-group {
+               display: flex;
+               align-items: flex-start;
+               margin-bottom: 15px;
+          }
+
+          .form-group label {
+               width: 180px;
+               font-weight: bold;
+               padding-top: 6px;
+          }
+
+          .form-group input[type="text"],
+          .form-group input[type="tel"],
+          .form-group input[type="date"],
+          .form-group input[type="time"],
+          .form-group textarea {
+               flex: 1;
+               max-width: 300px;
+               padding: 8px;
+               margin-right: 10px;
+               border: 1px solid #ccc;
+               border-radius: 4px;
+          }
+
+          .form-group textarea {
+               resize: vertical;
+               width: 300px;
+          }
+
+          .form-group div {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 10px;
+          }
+
+          .form-group div p {
+               margin: 0;
+               font-weight: normal;
+          }
+
+          .form-group input[type="radio"],
+          .form-group input[type="checkbox"] {
+               margin-right: 5px;
+          }
+
+          .checkbox-group {
+               display: flex;
+               flex-direction: column;
+               gap: 8px;
+               margin-top: 5px;
+          }
+
+          .checkbox-group label {
+               display: flex;
+               align-items: center;
+               font-weight: normal;
+          }
+
+          button {
+               padding: 10px 20px;
+               background-color: maroon;
+               color: white;
+               border: none;
+               border-radius: 4px;
+               cursor: pointer;
+               font-weight: bold;
+          }
+
+          .subbtn {
+               position: absolute;
+               bottom: 0px;
+               top: 700px;
+               left: 600px;
+               display: flex;
+               align-items: center;
+               margin: 10px;
+          }
+
+          button:hover {
+               background-color: darkred;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <div class="image-container">
+               <img src="./p2.jpg" alt="Doctor Image">
+          </div>
+          <div class="form-container">
+               <h1>Doctor Appointment Form</h1>
+               <hr>
+               <form>
+                    <div class="form-group">
+                         <label for="date">Appointment Date:</label>
+                         <input type="date" id="date">
+                    </div>
+
+                    <div class="form-group">
+                         <label for="time">Appointment Time:</label>
+                         <input type="time" id="time">
+                    </div>
+
+                    <div class="form-group">
+                         <label>Name:</label>
+                         <div>
+                              <input type="text" id="Fname" placeholder="First">
+                              <input type="text" id="Lname" placeholder="Last">
+                         </div>
+                    </div>
+
+                    <div class="form-group">
+                         <label>Gender:</label>
+                         <div>
+                              <input type="radio" name="gender" value="male" id="male">
+                              <label for="male">Male</label>
+                              <input type="radio" name="gender" value="female" id="female">
+                              <label for="female">Female</label>
+                         </div>
+                    </div>
+
+                    <div class="form-group">
+                         <label for="Pno">Phone:</label>
+                         <input type="tel" id="Pno" placeholder="####">
+                    </div>
+
+                    <div class="form-group">
+                         <label>Address:</label>
+                         <div>
+                              <input type="text" placeholder="City">
+                              <input type="text" placeholder="State">
+                         </div>
+                    </div>
+
+                    <div class="form-group">
+                         <label for="query">Your Query:</label>
+                         <textarea id="query" rows="4" cols="40" placeholder="Type your message here..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                         <label for="appointmentType">Appointment Type:</label>
+                         <div class="checkbox-group">
+                              <p>Select which appointment type(s) you require</p>
+                              <label><input type="checkbox" id="cervix"> Cervix checkup</label>
+                              <label><input type="checkbox" id="heart"> Heart checkup</label>
+                              <label><input type="checkbox" id="eye"> Eye check-up</label>
+                              <label><input type="checkbox" id="hearing"> Hearing Test</label>
+                         </div>
+                    </div>
+
+                    <div class="subbtn">
+                         <button type="submit">Send</button>
+                    </div>
+               </form>
+          </div>
+     </div>
+</body>
+
+</html> -->
+
+<!-- Task-3 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <title>Infomax Computer Academy</title>
+     <style>
+          body {
+               margin: 0;
+               font-family: Arial, sans-serif;
+               background-color: #002b40;
+               /* dark blue background */
+          }
+
+          .container {
+               background-color: #ffeb00;
+               /* bright yellow background */
+               margin: 40px auto;
+               padding: 20px;
+               width: 90%;
+               max-width: 1200px;
+               box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          }
+
+          header {
+               text-align: center;
+               color: #800000;
+          }
+
+          header h1 {
+               font-size: 2.5em;
+               font-weight: bold;
+               margin-bottom: 10px;
+          }
+
+          header span {
+               font-size: 1.5em;
+          }
+
+          nav {
+               text-align: left;
+               margin: 10px 0;
+               width: fit-content;
+          }
+
+          hr {
+               border: none;
+               height: 1px;
+               background-color: red;
+               margin: 10px 0;
+          }
+
+          nav a {
+               text-decoration: none;
+               color: #0000ff;
+               margin: 0 5px;
+               font-weight: bold;
+          }
+
+          .content {
+               display: flex;
+               justify-content: space-between;
+               margin-top: 20px;
+          }
+
+          .about {
+               flex: 2;
+               padding-right: 20px;
+          }
+
+          .about h2 {
+               font-size: 1.2em;
+               color: #000000;
+               text-decoration: underline;
+          }
+
+          .about p {
+               font-size: 1em;
+               margin-bottom: 15px;
+               color: #000000;
+          }
+
+          .student-image {
+               flex: 1;
+               text-align: right;
+          }
+
+          .student-image img {
+               width: 200px;
+               height: auto;
+          }
+
+          .registration {
+               margin-top: 40px;
+               text-align: center;
+               font-weight: bold;
+          }
+
+          .registration a {
+               color: blue;
+               text-decoration: underline;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <header>
+               <h1>INFOMAX<br><span>COMPUTER ACADEMY</span></h1>
+               <hr>
+               <nav>
+                    <a href="#">HOME</a> ||
+                    <a href="#">ABOUT US</a> ||
+                    <a href="#">COURSES</a> ||
+                    <a href="#">NIELIT</a> ||
+               </nav>
+               <hr>
+          </header>
+
+          <main>
+               <div class="content">
+                    <section class="about">
+                         <h2>Who We Are?</h2>
+                         <p>Infomax is Computer Academy which provides high quality computer education at a very high
+                              standard at a low cost.</p>
+                         <p>ICA's mission is to create a pool of high quality software professionals who will meet the
+                              demanding needs of multinational organizations for tomorrow's challenges.</p>
+
+                         <h2>What We Offer?</h2>
+                         <p>We are committed to provide technology-based education to all sections of the society, for
+                              the overall development of the country through continual improvements of quality
+                              management system to achieve our objectives of promoting younger generation towards
+                              prosperity.</p>
+                    </section>
+
+                    <div class="student-image">
+                         <img src="./p1.jpg" alt="Student Image">
+                    </div>
+               </div>
+
+               <div class="registration">
+                    Dear Student O Level Registration Start now for Registration <a href="#">Click Here</a>
+               </div>
+          </main>
+     </div>
+</body>
+
+</html>
+
+
+
+ -->

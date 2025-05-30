@@ -91,7 +91,6 @@
 //      }
 // }
 
-
 // class Node{
 //      int data;
 //      int height;
@@ -103,7 +102,6 @@
 //           this.left=this.right=null;
 //      }
 // }
-
 // public class AVL {
 //      Node root;
 //      public int height(Node n){
@@ -123,7 +121,6 @@
 //           Node z=y.left;
 //           x.right=z;
 //           y.left=x;
-
 //           x.height=Math.max(height(x.left),height(x.right))+1;
 //           y.height=Math.max(height(y.left),height(y.right))+1;
 //           return y;
@@ -223,7 +220,6 @@
 //           root.right = rightrotate(root.right);
 //           return leftrotate(root);
 //       }
-
 //       return root;
 //   }
 //      public void display(Node n){
@@ -251,4 +247,28 @@
 //           }
 //      }
 // }
+import java.util.Arrays;
 
+class Solution {
+
+    // Function to sort an array of 0s, 1s, and 2s
+    public void sort012(int[] arr) {
+        // code here
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int arr[] = {0, 1, 2, 0, 1, 2, 0, 1, 2};
+        Solution s = new Solution();
+        s.sort012(arr);
+        System.out.println("The Sorted Array is" + Arrays.toString(arr));
+    }
+}
