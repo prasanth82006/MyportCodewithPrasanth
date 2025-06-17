@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Assihnment 9</title>
+     <style>
+          .container {
+               display: flex;
+               align-items: center;
+               flex-direction: column;
+          }
+
+          .head {
+               font-family: Arial, Helvetica, sans-serif;
+               font-size: 25px;
+               margin-bottom: 30px;
+          }
+
+          label {
+               margin-right: 10px;
+          }
+
+          div {
+               display: flex;
+               margin: 10px;
+               align-items: flex-start;
+               justify-content: center;
+          }
+
+          p {
+               margin-top: 0;
+          }
+
+          input,
+          textarea {
+               margin-right: 20px;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <h1 class="head"> Registration form </h1>
+          <form>
+               <div>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" />
+                    <p id="nameCheck"></p>
+               </div>
+               <div>
+                    <label for="email">Email: </label>
+                    <input type="text" id="email" />
+                    <p id="emailCheck"></p>
+               </div>
+               <div>
+                    <label for="website">Website: </label>
+                    <input type="text" id="website" />
+                    <p id="websiteCheck"></p>
+               </div>
+               <div>
+                    <label for="message">Message: </label>
+                    <textarea id="message" rows="6"></textarea>
+                    <p id="messageCheck"></p>
+               </div>
+               <button type="submit">Submit </button>
+          </form>
+     </div>
+     <script>
+          let nameInput = document.getElementById('name')
+          let emailInput = document.getElementById('email')
+          let websiteInput = document.getElementById('website')
+          let messageInput = document.getElementById('message')
+          let nameCheck = document.getElementById('nameCheck')
+          let emailCheck = document.getElementById('emailCheck')
+          let websiteCheck = document.getElementById('websiteCheck')
+          let messageCheck = document.getElementById('messageCheck')
+          nameInput.addEventListener('blur', function () {
+               if (nameInput.value === '') {
+                    nameCheck.textContent = 'This field is required'
+                    nameCheck.style.color = 'red'
+                    nameCheck.style.fontWeight = 'bold'
+               }
+          })
+          emailInput.addEventListener('blur', function () {
+               if (emailInput.value === '') {
+                    emailCheck.textContent = 'A valid email address is required'
+                    emailCheck.style.color = 'red'
+                    emailCheck.style.fontWeight = 'bold'
+               }
+          })
+          websiteInput.addEventListener('blur', function () {
+               if (websiteInput.value === '') {
+                    websiteCheck.textContent = 'A valid URL is required'
+                    websiteCheck.style.color = 'red'
+                    websiteCheck.style.fontWeight = 'bold'
+               }
+          })
+          messageInput.addEventListener('blur', function () {
+               if (messageInput.value === '') {
+                    messageCheck.textContent = 'This field is required'
+                    messageCheck.style.color = 'red'
+                    messageCheck.style.fontWeight = 'bold'
+               }
+          })
+     </script>
+</body>
+
+</html>

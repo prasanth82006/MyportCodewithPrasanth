@@ -1,0 +1,371 @@
+<!-- Task-1 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #3c3434;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #0f1614;
+            padding: 30px;
+            border-radius: 20px;
+            width: 550px;
+            color: white;
+            text-align: center;
+            height: 400px;
+        }
+
+        h1 {
+            background-color: #f5f5f5;
+            color: black;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 40px;
+            font-size: 22px;
+        }
+
+        .inputbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px;
+            padding-top: 50px;
+        }
+
+        #passBox {
+            padding: 8px 10px;
+            width: 70%;
+            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            margin-right: 10px;
+            background-color: #f5f5f5;
+            color: black;
+        }
+
+        .getBtn{
+          padding: 8px 15px;
+            background-color: black;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 5px;
+            color: white;
+        }
+         .copyBtn {
+            padding: 8px 25px;
+            background-color: #f5f5f5;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .container2 {
+            margin: 50px;
+            
+            padding-top: 50px;
+        }
+
+        .options-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            width: 40%;
+        }
+
+        .slider-container input[type="range"] {
+            width: 100%;
+            margin-right: 10px;
+        }
+
+        .length-display {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            margin: 0 10px;
+        }
+
+        .checkboxes {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .checkboxes div {
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            font-size: 14px;
+            margin-left: 15px;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Password - Generator</h1>
+        <div class="inputbox">
+            <input type="text" id="passBox" disabled />
+            <button class="getBtn" onclick="generatePassword()">Password</button>
+            <button class="copyBtn" onclick="copyPassword()">Copy</button>
+        </div>
+        <div class="container2">
+            <div class="options-row">
+                <div class="slider-container">
+                    <input type="range" min="6" max="20" value="10" id="inputSlider" />
+                </div>
+                <div class="length-display">
+                    <p>Length <span id="sliderValue">10</span></p>
+                </div>
+                <div class="checkboxes">
+                    <div>
+                        <input type="checkbox" id="includeChars" checked />
+                        <label for="includeChars">Characters</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="includeNumbers" checked />
+                        <label for="includeNumbers">Numbers</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const passBox = document.getElementById("passBox");
+        const inputSlider = document.getElementById("inputSlider");
+        const sliderValue = document.getElementById("sliderValue");
+        const includeChars = document.getElementById("includeChars");
+        const includeNumbers = document.getElementById("includeNumbers");
+
+        const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+=[]{}|:;'<>,.?/";
+        const nums = "0123456789";
+
+        sliderValue.textContent = inputSlider.value;
+
+        inputSlider.addEventListener("input", () => {
+            sliderValue.textContent = inputSlider.value;
+        });
+
+        function generatePassword() {
+            let finalChars = "";
+            if (includeChars.checked) finalChars += chars;
+            if (includeNumbers.checked) finalChars += nums;
+            if (finalChars.length === 0) {
+                passBox.value = "Select options";
+                return;
+            }
+
+            let password = "";
+            for (let i = 0; i < inputSlider.value; i++) {
+                const randomIndex = Math.floor(Math.random() * finalChars.length);
+                password += finalChars[randomIndex];
+            }
+            passBox.value = password;
+        }
+
+        function copyPassword() {
+            navigator.clipboard.writeText(passBox.value).then(() => {
+                alert("Password copied!");
+            });
+        }
+    </script>
+</body>
+</html> -->
+
+<!-- Task-2 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          .container1 {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               margin-top: 20px;
+          }
+          .container2 {
+               border: 1px solid black;
+               padding: 20px;
+               border-radius: 5px;
+          }
+          .row {
+               margin-bottom: 10px;
+          }
+          .row label {
+               display: inline-block;
+               width: 100px;
+          }
+          .row input {
+               width: 150px;
+               padding: 5px;
+          }
+          .convert {
+               text-align: left;
+               margin-top: 10px;
+          }
+          .convert button {
+               margin: 0 5px;
+               padding: 5px 10px;
+               cursor: pointer;
+               border: 1px solid black;
+          }
+          .convert button.active {
+               border: 1px solid aqua; 
+          }
+          .container3 {
+               margin-top: 20px;
+               font-weight: bold;
+          }
+     </style>
+</head>
+<body>
+     <div class="container1">
+          <div class="container2">
+               <div class="row">
+                    <label for="FirstNumber">1st Number:</label>
+                    <input type="text" id="FirstNumber" placeholder="Enter First Number">
+               </div>
+               <div class="row">
+                    <label for="SecondNumber">2nd Number:</label>
+                    <input type="text" id="SecondNumber" placeholder="Enter Second Number">
+               </div>
+               <div class="convert">
+                    <button id="Mbtn" onclick="calculate('multiply')">Multiply</button>
+                    <button id="Dbtn" onclick="calculate('divide')">Divide</button>
+               </div>
+          </div>
+          <div class="container3">The Result Is:</div>
+     </div>
+
+     <script>
+          function calculate(operation) {
+               const firstNumber = parseFloat(document.getElementById('FirstNumber').value);
+               const secondNumber = parseFloat(document.getElementById('SecondNumber').value);
+               const resultDiv = document.querySelector('.container3');
+
+               const multiplyBtn = document.getElementById('Mbtn');
+               const divideBtn = document.getElementById('Dbtn');
+
+               if (operation === 'multiply') {
+                    multiplyBtn.classList.add('active');
+                    divideBtn.classList.remove('active');
+               } else if (operation === 'divide') {
+                    divideBtn.classList.add('active');
+                    multiplyBtn.classList.remove('active');
+               }
+
+               if (isNaN(firstNumber) || isNaN(secondNumber)) {
+                    resultDiv.innerHTML = 'The Result Is: Please enter valid numbers';
+                    return;
+               }
+
+               let result;
+               if (operation === 'multiply') {
+                    result = firstNumber * secondNumber;
+                    resultDiv.innerHTML = `The Result Is: ${result}`;
+               } else if (operation === 'divide') {
+                    if (secondNumber === 0) {
+                         resultDiv.innerHTML = 'The Result Is: Cannot divide by zero';
+                    } else {
+                         result = firstNumber / secondNumber;
+                         resultDiv.innerHTML = `The Result Is: ${result}`;
+                    }
+               }
+          }
+     </script>
+</body>
+</html> -->
+
+<!-- task-3 -->
+ <!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Task 1</title>
+</head>
+
+<body>
+     <label for="number">Enter your number: </label>
+     <input type="text" id="number" />
+     <button onclick="reverseNumber()"> Reverse Value</button>
+     <p>The reversed value is : <span id="getValue"></span></p>
+     <script>
+          function reverseNumber() {
+               const input = document.getElementById('number')
+               let inputValue = parseInt(input.value)
+               const span = document.getElementById('getValue')
+               let result = 0;
+               while (inputValue !== 0) {
+                    result = result * 10 + inputValue % 10
+                    inputValue = Math.floor(inputValue / 10)
+               }
+               span.innerText = result
+          }
+     </script>
+</body>
+
+</html> -->
+
+<!-- Task-4 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+    <label for="string">Enter your string: </label>
+    <input type="text" id="string"/>
+    <button onclick="sortString()"> sortString</button>
+    <p>The Sort string is : <span id="getValue"></span></p>
+    <script>
+        function sortString(){
+            const input = document.getElementById('string')
+            const span = document.getElementById('getValue')
+            let inputValue = input.value
+            let result = inputValue.split("").sort().join("")            
+            span.innerText = result
+        }
+    </script>
+</body>
+</html> -->

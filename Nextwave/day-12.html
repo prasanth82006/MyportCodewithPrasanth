@@ -1,0 +1,291 @@
+<!-- Task-1 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <style>
+     #time{
+          font-size: 25px;
+     }
+    </style>
+</head>
+<body>
+    <p id="time"></p>
+    <button type="button" onclick="start()">Click me</button>
+    <button type="button" onclick="stop()">Stop</button>
+    <script>
+     const time = document.getElementById('time')
+let timerId
+const start = function(){
+    timerId = setInterval(() => {
+        time.textContent = new Date()
+    },1000)
+}
+function stop(){
+    clearInterval(timerId)
+}
+    </script>
+</body>
+</html> -->
+
+<!-- task-2 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Task 2 - Weather App</title>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          body {
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               background-color: #a3dbc9;
+               height: 100vh;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          .bg {
+               width: 90%;
+               max-width: 1000px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               color: white;
+               position: relative;
+          }
+
+          .head {
+               position: absolute;
+               top: -60px;
+               font-size: 36px;
+               font-weight: bold;
+               width: 100%;
+               text-align: center;
+               color: white;
+          }
+
+          .left {
+               text-align: left;
+               font-size: 18px;
+               padding-left: 150px;
+          }
+
+          .left .temp {
+               font-size: 72px;
+               font-weight: 200;
+               margin-bottom: 10px;
+          }
+
+          .right {
+               display: flex;
+               align-items: center;
+               gap: 10px;
+               padding-right: 150px;
+          }
+
+          input {
+               background: transparent;
+               border: none;
+               border-bottom: 2px solid white;
+               color: white;
+               font-size: 18px;
+               padding: 5px 10px;
+               outline: none;
+               width: 200px;
+          }
+
+          input::placeholder {
+               color: white;
+               opacity: 0.7;
+          }
+
+          button {
+               background: white;
+               color: black;
+               border: none;
+               padding: 8px 20px;
+               font-size: 16px;
+               border-radius: 30px;
+               cursor: pointer;
+               transition: 0.3s;
+          }
+
+          button:hover {
+               background: #e0e0e0;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="bg">
+          <h1 class="head">Weather App</h1>
+          <div class="left">
+               <div class="temp" id="temperature">20</div>
+               <div id="city">Bhopal</div>
+               <div id="time">12:15 Monday</div>
+               <div id="weath">mist</div>
+          </div>
+          <div class="right">
+               <input type="text"  value="Allahabad" id="input" />
+               <button onclick="findWeather()">Search Button</button>
+          </div>
+     </div>
+
+     <script>
+          const temperature = document.getElementById('temperature');
+          const city = document.getElementById('city');
+          const time = document.getElementById('time');
+          const weath = document.getElementById('weath');
+          const input = document.getElementById('input');
+          const apiKey = 'b800d453b62b3572469d3b526255ed19';
+
+          async function findWeather() {
+               const inputValue = input.value.trim();
+               if (!inputValue) {
+                    alert('Please enter a city name.');
+                    return;
+               }
+
+               const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=metric`;
+                    const response = await fetch(apiUrl);
+                    const data = await response.json();
+
+                    if (data.cod !== 200) {
+                         alert(data.message);
+                         return;
+                    }
+
+                    const { weather, main, name } = data;
+                    const { temp } = main;
+                    const { description } = weather[0];
+                    const samayam = new Date();
+                    const week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+                    temperature.textContent = `${Math.round(temp)}`;
+                    city.textContent = name;
+                    time.textContent = `${samayam.getHours()}:${samayam.getMinutes().toString().padStart(2, '0')} ${week[samayam.getDay()]}`;
+                    weath.textContent = description;
+                    input.value = '';
+          }
+     </script>
+</body>
+
+</html> -->
+
+
+<!-- Task-3 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Task 3</title>
+     <style>
+          body {
+               background: #f0f2f5;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               margin: 0;
+          }
+
+          .container {
+               background: #fff;
+               padding: 30px;
+               border-radius: 15px;
+               box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+               width: 300px;
+               text-align: center;
+          }
+
+          label {
+               display: block;
+               margin-top: 15px;
+               font-weight: 500;
+               text-align: left;
+          }
+
+          input {
+               width: 100%;
+               padding: 10px;
+               margin-top: 5px;
+               border: 1px solid #ccc;
+               border-radius: 8px;
+               box-sizing: border-box;
+               transition: border 0.3s;
+          }
+
+          input:focus {
+               border: 1px solid #007bff;
+               outline: none;
+          }
+
+          button {
+               margin-top: 20px;
+               padding: 10px 15px;
+               border: none;
+               border-radius: 8px;
+               background-color: #007bff;
+               color: white;
+               font-size: 16px;
+               cursor: pointer;
+               margin-right: 10px;
+               transition: background 0.3s;
+          }
+
+          button:hover {
+               background-color: #0056b3;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <label for="name">Name:</label>
+          <input id="name" placeholder="Name" />
+
+          <label for="age">Age:</label>
+          <input id="age" placeholder="Age" />
+
+          <button type="button" onclick="save()">Save</button>
+          <button type="button" onclick="load()">Load</button>
+     </div>
+
+     <script>
+          const nameEle = document.getElementById('name');
+          const ageEle = document.getElementById('age');
+
+          function save() {
+               const details = {
+                    name: nameEle.value,
+                    age: ageEle.value
+               };
+               localStorage.setItem('details', JSON.stringify(details));
+               nameEle.value = '';
+               ageEle.value = '';
+          }
+
+          function load() {
+               let details = JSON.parse(localStorage.getItem('details'));
+               const { name, age } = details;
+               nameEle.value = name;
+               ageEle.value = age;
+
+          }
+     </script>
+</body>
+
+</html> -->

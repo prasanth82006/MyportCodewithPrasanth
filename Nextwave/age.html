@@ -1,0 +1,147 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Age Calculator</title>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          body {
+               background-color: #8a2be2;
+               font-family: Arial, Helvetica, sans-serif;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;
+               color: white;
+          }
+
+          .container {
+               text-align: center;
+          }
+
+          h1 {
+               margin-bottom: 50px;
+               font-size: 2.5rem;
+          }
+
+          .container2 {
+               margin-bottom: 50px;
+          }
+
+          .cInput {
+               background: white;
+               padding: 15px;
+               border-radius: 10px;
+               display: inline-flex;
+               gap: 10px;
+               align-items: center;
+               box-shadow: 6px 6px 10px black;
+          }
+
+          .cInput input {
+               padding: 10px;
+               border: 1px solid #ccc;
+               border-radius: 6px;
+          }
+
+          .cInput button {
+               padding: 10px 20px;
+               background-color: #8a2be2;
+               color: white;
+               border: none;
+               border-radius: 6px;
+               font-weight: bold;
+               cursor: pointer;
+          }
+
+          .container3 {
+               display: flex;
+               justify-content: center;
+               gap: 30px;
+          }
+
+          .cYear,
+          .cMonth,
+          .cDay {
+               background: white;
+               color: black;
+               padding: 20px;
+               border-radius: 10px;
+               width: 120px;
+               box-shadow: 6px 6px 10px black;
+          }
+
+          .cYear p,
+          .cMonth p,
+          .cDay p {
+               font-size: 2rem;
+               font-weight: bold;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <div class="container1">
+               <h1>AGE CALCULATOR</h1>
+          </div>
+
+          <div class="container2">
+               <div class="cInput">
+                    <input style="background-color: rgba(67, 67, 239, 0.687);opacity: 0.8; " type="date" id="date">
+                    <button id="btn">Calculate</button>
+               </div>
+          </div>
+
+          <div class="container3">
+               <div class="cYear">
+                    <p id="years">00</p>
+                    <h3>YEAR</h3>
+               </div>
+               <div class="cMonth">
+                    <p id="months">00</p>
+                    <h3>MONTH</h3>
+               </div>
+               <div class="cDay">
+                    <p id="days">00</p>
+                    <h3>DAY</h3>
+               </div>
+          </div>
+     </div>
+
+     <script>
+          document.getElementById("btn").addEventListener("click", function () {
+               const birthDate = new Date(document.getElementById("date").value);
+               const today = new Date();
+
+
+               let years = today.getFullYear() - birthDate.getFullYear();
+               let months = today.getMonth() - birthDate.getMonth();
+               let days = today.getDate() - birthDate.getDate();
+
+               if (days < 0) {
+                    months--;
+                    const lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+                    days += lastMonth.getDate();
+               }
+
+               if (months < 0) {
+                    years--;
+                    months += 12;
+               }
+
+               document.getElementById("years").textContent = years < 10 ? "0" + years : years;
+               document.getElementById("months").textContent = months < 10 ? "0" + months : months;
+               document.getElementById("days").textContent = days < 10 ? "0" + days : days;
+          });
+     </script>
+</body>
+
+</html> -->

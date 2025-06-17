@@ -1,11 +1,467 @@
-<!DOCTYPE html>
+<!-- Task-1 -->
+<!-- <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 300px;
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+        }
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 20px 0;
+            font-size: 18px;
+            min-width: 60px;
+            max-width: 90px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255,0.2);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .container1 {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #28a745;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .box h3 {
+            margin: 0;
+            font-size: 18px;
+            color:black;
+        }
+        .box p {
+            margin: 10px 0 0;
+            font-size: 30px;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>School Dashboard</h2>
+            <ul>
+                <li>Dashboard</li>
+                <li>Students</li>
+                <li>Teachers</li>
+                <li>Classes</li>
+                <li>Exams</li>
+                <li>Library</li>
+                <li>Settings</li>
+            </ul>
+        </div>
+        <div class="container1">
+            <div class="header">Welcome to the School Dashboard</div>
+            <div class="stats">
+                <div class="box">
+                    <h3>Total Students</h3>
+                    <p>500</p>
+                </div>
+                <div class="box">
+                    <h3>Total Teachers</h3>
+                    <p>50</p>
+                </div>
+                <div class="box">
+                    <h3>Classes</h3>
+                    <p>20</p>
+                </div>
+                <div class="box">
+                    <h3>Upcoming Exams</h3>
+                    <p>5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->
+
+<!-- Task-2 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
+     <title>Photo container2</title>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          body {
+               font-family: Arial, sans-serif;
+               background-color: #eee;
+          }
+
+          .container1 {
+               background-color: black;
+               color: white;
+               text-align: center;
+               padding: 20px;
+               border-radius: 20px;
+               width: 90%;
+               margin: 20px auto 40px;
+               box-shadow: -4px -4px orange;
+          }
+
+          .container1 h1 {
+               font-size: 28px;
+          }
+
+          .container2 {
+               display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+               gap: 20px;
+               max-width: 1200px;
+               margin: 0 auto;
+               padding: 0 20px 40px;
+               border: 1px solid black;
+               background-color: #fff;
+               box-shadow: 0px -8px 0px black;
+
+          }
+
+          .box {
+               width: 100%;
+               height: 200px;
+               border: 2px solid #ccc;
+               border-radius: 20px;
+               overflow: hidden;
+               background-color: #f0f0f0;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: 10px;
+          }
+
+          .box img {
+               width: 100%;
+               height: 100%;
+               background-size: cover;
+               border-radius: 20px;
+               opacity: 0.6;
+          }
+
+     </style>
+</head>
+
+<body>
+
+     <div class="container1">
+          <h1>Photo Gallery</h1>
+     </div>
+
+     <div class="container2">
+          <div class="box">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj7nBsEO1R4ZW2a0sl1VnL6utlqjNvmePC4A&s" alt="Nature 1">
+          </div>
+          <div class="box">
+               <img src="https://t3.ftcdn.net/jpg/02/82/67/22/360_F_282672294_g0LwMrnRpYS3jHcMqxQIYkpSOERoXzp3.jpg" alt="Nature 2">
+          </div>
+          <div class="box">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpAITfGsM849-tLJkvF642-TaVoYrte6Nhag&s" alt="Nature 3">
+          </div>
+          <div class="box">
+               <img src="" alt="Nature 4">
+          </div>
+          <div class="box">
+               <img src="" alt="Nature 5">
+          </div>
+          <div class="box">
+               <img src="" alt="Nature 6">
+          </div>
+          <div class="box">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj7nBsEO1R4ZW2a0sl1VnL6utlqjNvmePC4A&s" alt="Nature 1">
+          </div>
+          <div class="box">
+               <img src="https://t3.ftcdn.net/jpg/02/82/67/22/360_F_282672294_g0LwMrnRpYS3jHcMqxQIYkpSOERoXzp3.jpg" alt="Nature 8">
+          </div>
+     </div>
+
+</body>
+
+</html> -->
+
+
+
+<!-- Task-3 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Task 3</title>
+     <style>
+          * {
+               box-sizing: border-box;
+          }
+
+          body {
+               margin: 0;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               min-height: 100vh;
+               font-family: Arial, Helvetica, sans-serif;
+          }
+
+          .calculator {
+               background-color: grey;
+               box-shadow: 3px 3px 5px;
+               padding: 10px;
+               width: 260px;
+          }
+
+          .main-element {
+               border-top: 1px solid;
+               border-left: 1px solid;
+               background-color: white;
+               display: flex;
+               align-items: center;
+               padding: 0 20px;
+               margin-left: 5px;
+               width: 230px;
+               font-size: 24px;
+
+          }
+
+          .elements {
+               display: flex;
+               flex-wrap: wrap;
+          }
+
+          button {
+               cursor: pointer;
+               width: 50px;
+               height: 50px;
+               color: #fff;
+               border-radius: 5px;
+               font-size: 25px;
+               margin: 5px;
+               background-color: cyan;
+               border: 0;
+               border-right: 2px solid black;
+               border-bottom: 2px solid black;
+               box-shadow: 1px 1px 2px white;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="calculator">
+          <div class="main-element">
+               <p> 0 </p>
+          </div>
+          <div class="elements">
+               <button> C </button>
+               <button> % </button>
+               <button>
+                    <= </button>
+                         <button> / </button>
+                         <button> 7 </button>
+                         <button> 8 </button>
+                         <button> 9 </button>
+                         <button> * </button>
+                         <button> 4 </button>
+                         <button> 5 </button>
+                         <button> 6 </button>
+                         <button> - </button>
+                         <button> 1 </button>
+                         <button> 2 </button>
+                         <button> 3 </button>
+                         <button> + </button>
+                         <button> 00 </button>
+                         <button> 0 </button>
+                         <button> . </button>
+                         <button> = </button>
+          </div>
+     </div>
+</body>
+</html> -->
+
+<!-- Task-4 -->
+ 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+     *{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.bg{
+    background-image: url('https://5.imimg.com/data5/DB/WJ/MY-605509/music-concert.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    padding: 50px;
+}
+.first{
+    background-color: rgb(0, 0,0,0.5);
+    border: 1px dashed white;
+    border-radius: 10px;
+    padding: 5px 0;
+    margin-bottom: 15px;
+}
+.head{
+    margin-left: 50px;
+    color: #fff;
+    text-shadow: 2px 2px 2px cyan;
+    font-weight: bold;
+}
+.second{
+    border-radius: 30px;
+    background-color: rgb(255, 255,255,0.5);
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+button{
+    margin-left: 5px;
+    background-color: #303134;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer;
+}
+.main{
+    border: 1px dashed white;
+    padding: 20px  10px;
+    border-radius: 20px
+}
+.category{
+    border: 2px dashed white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+.category-name{
+    color: #fff;
+    margin-left: 20px;
+    font-weight: bold;
+}
+.img{
+    height: 150px;
+    width: 100px;
+    border: 1px solid white;
+    padding: 1px;
+    margin-right: 10px;
+}
+.songs{
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+    </style>
 </head>
 <body>
-     
+    <div class="bg">
+        <div class="first">
+            <h1 class="head"> Music World </h1>
+        </div>
+        <div class="second">
+            <button>Home</button>
+            <button>About Us</button>
+            <button>Category ↓</button>
+            <button>Production</button>
+            <button>Gallery</button>
+            <button>Contact Us</button>
+            <button>Login</button>
+        </div>
+        <div class="main">
+            <div class="category">
+                <h1 class="category-name">→ Latest Album ...</h1>
+                <hr/>
+                <div class="songs">
+                    <img src="Dear Comrade.png" alt="song-name" class="img"/>
+                    <img src="Dookudu.png" alt="song-name" class="img"/>
+                    <img src="Geetha Madhuri.png" alt="song-name" class="img"/>
+                    <img src="Nenu Sailaja.png" alt="song-name" class="img"/>
+                    <img src="Yamadonga.png" alt="song-name" class="img"/>
+                    <img src="Varsham.png" alt="song-name" class="img"/>
+                    <img src="Geetha Madhuri.png" alt="song-name" class="img"/>
+                    <img src="Dear Comrade.png" alt="song-name" class="img"/>
+                </div>
+            </div>
+            <div class="category">
+                <h1 class="category-name">→ Top 10 Songs ...</h1>
+                <hr/>
+                <div class="songs">
+                    <img src="Dookudu.png" alt="song-name" class="img"/>
+                    <img src="Varsham.png" alt="song-name" class="img"/>
+                    <img src="Nenu Sailaja.png" alt="song-name" class="img"/>
+                    <img src="Yamadonga.png" alt="song-name" class="img"/>
+                    <img src="Geetha Madhuri.png" alt="song-name" class="img"/>
+                    <img src="Dear Comrade.png" alt="song-name" class="img"/>
+                    <img src="Dookudu.png" alt="song-name" class="img"/>
+                    <img src="Varsham.png" alt="song-name" class="img"/>
+                </div>
+            </div>
+            <div class="category">
+                <h1 class="category-name">→ Top 10 Artist ...</h1>
+                <hr/>
+                <div class="songs">
+                    <img src="Nenu Sailaja.png" alt="song-name" class="img"/>
+                    <img src="Varsham.png" alt="song-name" class="img"/>
+                    <img src="Dear Comrade.png" alt="song-name" class="img"/>
+                    <img src="Dookudu.png" alt="song-name" class="img"/>
+                    <img src="Varsham.png" alt="song-name" class="img"/>
+                    <img src="Yamadonga.png" alt="song-name" class="img"/>
+                    <img src="Dear Comrade.png" alt="song-name" class="img"/>
+                    <img src="Geetha Madhuri.png" alt="song-name" class="img"/>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-</html>
+</html> -->

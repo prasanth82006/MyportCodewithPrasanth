@@ -1,0 +1,176 @@
+<!-- task-1 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Prime Number Generator</title>
+     <style>
+          body {
+               font-family: Arial, sans-serif;
+               background: white;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;
+               margin: 0;
+          }
+
+
+          h2 {
+               text-align: center;
+               font-size: 24px;
+               margin-bottom: 20px;
+          }
+
+          table {
+               width: 100%;
+               border-collapse: collapse;
+          }
+
+          td {
+               padding: 10px;
+               vertical-align: top;
+               border: 1px solid #ccc;
+          }
+
+
+          label {
+               font-weight: 500;
+          }
+
+          input[type="number"] {
+               width: 50%;
+               padding: 6px 10px;
+               border: 1px solid #ccc;
+               border-radius: 4px;
+               font-size: 14px;
+               resize: none;
+          }
+
+          textarea {
+               width: 90%;
+               padding: 6px 10px;
+               border: 1px solid #ccc;
+               border-radius: 4px;
+               font-size: 14px;
+               resize: none;
+          }
+
+          button {
+               padding: 8px 20px;
+               font-size: 16px;
+               cursor: pointer;
+               border: 1px solid #ccc;
+               background-color: #fff;
+               border-radius: 4px;
+               box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+               transition: background 0.3s;
+          }
+
+          button:hover {
+               background-color: #eee;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <h1>Prime Number Generator</h1>
+          <table>
+               <tr>
+                    <td>Start</td>
+                    <td><input type="number" id="start" /></td>
+               </tr>
+               <tr>
+                    <td>End</td>
+                    <td><input type="number" id="end" /></td>
+               </tr>
+               <tr>
+                    <td>Prime Number</td>
+                    <td><textarea id="output" rows="5" cols="30" readonly></textarea></td>
+               </tr>
+               <tr>
+                    <td colspan="2" style="text-align:center;">
+                         <button onclick="generatePrimes()"> Generate</button>
+                    </td>
+               </tr>
+          </table>
+     </div>
+     <script>
+          function isPrime(n) {
+               if (n < 2) return false;
+               for (let i = 2; i <= Math.sqrt(n); i++) {
+                    if (n % i === 0) return false;
+               }
+               return true;
+          }
+
+          function generatePrimes() {
+               const start = parseInt(document.getElementById('start').value);
+               const end = parseInt(document.getElementById('end').value);
+               const output = document.getElementById('output');
+               output.value = '';
+
+               if (isNaN(start) || isNaN(end) || start > end) {
+                    output.value = 'Please enter valid range (start <= end)';
+                    return;
+               }
+
+               let result = [];
+               for (let i = start; i <= end; i++) {
+                    if (isPrime(i)) {
+                         result.push(i);
+                    }
+               }
+
+               output.value = result.join(', ');
+          }
+
+     </script>
+</body>
+
+</html> -->
+<!-- task2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        div{
+            margin-top: 20px;
+            text-align: center;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Mobile Number Validation using Javascript</h1>
+            <label for="number">Enter Mobile Number</label>
+            <input id="number" type="text" placeholder="Enter 10 Digit Mobile Number"/>
+            <p id="validateMsg"></p>
+            <button onclick="validate()">Validate</button>
+    </div>
+    <script type="text/javascript">
+        let input = document.getElementById('number')
+        let validateMsg = document.getElementById('validateMsg')
+        function validate(){
+            let inputValue = input.value
+            console.log(inputValue)
+            if(inputValue.length === 10){
+                validateMsg.textContent = 'The number is valid'
+            }else{
+                validateMsg.textContent = 'The number is invalid' 
+            }
+            return false
+        }
+    </script>
+</body>
+</html>
